@@ -1,0 +1,124 @@
+# Header
+
+menu:
+  主页: /
+  归档: /archives
+  项目: /projects
+  读书: /books
+  电影: /movies
+  发现: /social
+
+# SubNav
+subnav:
+  github: "https://github.com/mythsman"
+  weibo: "http://weibo.com/u/5320278224"
+  rss: "/atom.xml"
+  zhihu: "https://www.zhihu.com/people/ding-qing-zhu/"
+  qq: "https://user.qzone.qq.com/1276077732"
+  #weixin: "#"
+  jianshu: "http://www.jianshu.com/users/51a5769033f1/"
+  douban: "https://www.douban.com/people/mythsman/"
+  segmentfault: "https://segmentfault.com/u/mythsman"
+  bilibili: "http://space.bilibili.com/101787792"
+  #acfun: "#"
+  mail: "mailto:dqz48548263@qq.com"
+  #facebook: "#"
+  google: "https://plus.google.com/u/0/102714669152385773121"
+  #twitter: "#"
+  #linkedin: "#"
+
+rss: /atom.xml
+
+# 是否需要修改 root 路径
+# 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
+# 请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
+root: 
+
+# Content
+
+# 文章太长，截断按钮文字
+excerpt_link: more
+# 文章卡片右下角常驻链接，不需要请设置为false
+show_all_link: '展开全文'
+# 数学公式
+mathjax: true
+# 是否在新窗口打开链接
+open_in_new: false
+
+# 打赏
+# 请在需要打赏的文章的md文件头部，设置属性reward: true
+
+# 打赏基础设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
+reward_type: 2
+# 打赏wording
+reward_wording: '好人一生平安'
+# 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
+alipay: /images/alipay.png
+# 微信二维码图片地址
+weixin: /images/weixin.png
+
+# Miscellaneous
+baidu_analytics: '4fe809868242dc9d16990780f04b2a56'
+google_analytics: 'UA-99608806-1'
+favicon: /favicon.ico
+
+#你的头像url
+avatar: /images/avatar.gif
+
+#是否开启分享
+share_jia: false
+
+#评论：1、多说；2、网易云跟帖；3、畅言；4、Disqus 不需要使用某项，直接设置值为false，或注释掉
+#具体请参考wiki：https://github.com/litten/hexo-theme-yilia/wiki/
+
+#1、多说
+duoshuo: false
+
+#2、网易云跟帖
+wangyiyun: false
+
+#3、畅言
+#changyan_appid: cyt3JyjBy
+#changyan_conf: prod_18351297baa5595579646e41117c6b43
+
+#4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的
+disqus: false
+
+# 样式定制 - 一般不需要修改，除非有很强的定制欲望…
+style:
+  # 头像上面的背景颜色
+  header: '#4d4d4d'
+  # 右滑板块背景
+  slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
+
+# slider的设置
+slider:
+  # 是否默认展开tags板块
+  showTags: true
+
+
+# 智能菜单
+# 如不需要，将该对应项置为false
+# 比如
+#smart_menu:
+#  friends: false
+smart_menu:
+  innerArchive: 搜索
+  friends: 朋友
+  aboutme: 关于
+
+friends:
+  Mikito(摸摸大): http://mikito.cn/
+  Ivy_end(凯凯王): http://www.ivy-end.com/links
+  sdwalker(司机老): http://www.sdwalker.com
+  Maomorn(老毛子): http://maomorn.cn/wordpress/?p=1
+  Anthony_An(沈学弟): http://blog.ibilidi.cn/?page_id=389
+  Huas(花尔兹): http://qyxhsj.com.cn
+  AngelMsger(七号天): https://angelmsger.com/
+  Netrvin(小dalao): https://131.re/mpage/5
+  ihoeys(梦魇小栈): https://blog.ihoey.com/links/
+  callouweicheng(炜承学长): http://blog.callouweicheng.cn
+  Decader_Luo(潘大佬): http://decader.cn/
+  ZheWang(吉吉): http://zhewangchina.cn
+
+aboutme: 江苏弱校大三狗<br>我是一个奋斗者（误）
