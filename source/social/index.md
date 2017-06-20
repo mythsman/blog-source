@@ -15,3 +15,5 @@ date: 2017-06-14 12:34:22
 [Oilbeater](http://oilbeater.com/)
 [羡辙](http://zhangwenli.com/)
 [DIYgod](https://www.anotherhome.net/)
+[龙哥盟](http://flygon.net/)
+[闵聪](https://congm.in/)
