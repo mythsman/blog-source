@@ -17,3 +17,5 @@ date: 2017-06-14 12:34:22
 [DIYgod](https://www.anotherhome.net/)
 [龙哥盟](http://flygon.net/)
 [闵聪](https://congm.in/)
+[byvoid](https://www.byvoid.com/)
+[Sukai](http://sukai.me/)

@@ -86,9 +86,11 @@ disqus: false
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
   # 头像上面的背景颜色
-  header: '#4d4d4d'
+  header: '#84C1FF'
+  #header: '#4d4d4d'
   # 右滑板块背景
-  slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
+  #slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
+  slider: 'linear-gradient(100deg,#b0dfe4,#48432e)'
 
 # slider的设置
 slider:
@@ -120,4 +122,4 @@ friends:
   Decader_Luo(潘大佬): http://decader.cn/
   ZheWang(吉吉): http://zhewangchina.cn
 
-aboutme: 江苏弱校大三狗<br>我是一个奋斗者（误）
+aboutme: 一个正在找实习的大三狗。。。生活如此艰难。。。
