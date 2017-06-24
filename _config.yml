@@ -98,6 +98,9 @@ jsonContent:
     categories: false
     tags: true
 
+sitemap:
+  path: sitemap.xml
+
 douban:
   user: mythsman
   book:
@@ -107,20 +110,4 @@ douban:
     title: 我的电影
     quote: 2017年，我使用<a href="https://www.douban.com/people/mythsman/" target="_blank">豆瓣</a>记录我看的电影。
 
-
-html_minifier:
-  enable: true
-  ignore_error: false
-  exclude:
-css_minifier:
-  enable: true
-  exclude: 
-    - '*.min.css'
-js_minifier:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude: 
-    - '*.min.js'
 
