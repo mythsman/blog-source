@@ -132,7 +132,7 @@ function init() {
 		handleSearch(val)
     })
 
-	window.fetch(window.yiliaConfig.root + 'content.json?t=' + (+ new Date()), {
+	window.fetch(window.yiliaConfig.root + 'content.json', {
 		method: 'get',
 	}).then((res) => {
 		return res.json()
