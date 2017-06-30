@@ -60,9 +60,11 @@ time_format: HH:mm:ss
 per_page: 50
 pagination_dir: page
 
+
+#hexo-generator-index
 index_generator:
   path: ''
-  per_page: 1
+  per_page: 5
   order_by: -date
 
 # Extensions
@@ -70,20 +72,15 @@ index_generator:
 ## Themes: https://hexo.io/themes/
 theme: yilia
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: #git
-  repository: #git@github.com:mythsman/mythsman.github.io.git
-  branch: #master
-  message: 
 
-#hexo-generator-search
-#search:
-#  path: search.xml
-#  field: post
+#hexo-deployer-git
+#deploy:
+#  type: #git
+#  repository: #git@github.com:mythsman/mythsman.github.io.git
+#  branch: #master
+#  message: 
 
-
+#hexo-generator-json-content
 jsonContent:
   meta: false
   pages: false
@@ -103,9 +100,20 @@ jsonContent:
     categories: false
     tags: true
 
+#hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: false
+  hub:
+  content:
+
+
+#hexo-generator-sitemap
 sitemap:
   path: sitemap.xml
 
+#hexo-douban
 douban:
   user: mythsman
   book:
@@ -116,3 +124,20 @@ douban:
     quote: 2017年，我使用<a href="https://www.douban.com/people/mythsman/" target="_blank">豆瓣</a>记录我看的电影。
 
 
+#hexo-generator-tag
+tag_generator:
+  per_page: 0
+
+#hexo-generator-category
+category_generator:
+  per_page: 0
+
+#hexo-generator-archive
+archive_generator:
+  per_page: 50
+  yearly: true
+  monthly: true
+  daily: false
+
+#hexo-excerpt
+excerpt_depth: 5

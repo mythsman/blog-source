@@ -7,6 +7,9 @@ category:
 tags:
   - Web
   - Nodejs
+password: 233
+abstract: Welcome to my blog, enter password to read.
+message: Welcome to my blog, enter password to read.
 ---
 ## 背景
 前几天在逛博客的时候发现两个用hexo的很厉害的博客:[yikun](http://yikun.github.io/douban/),[raysmond](http://raysmond.com/)，发现他们不仅内容牛x，而且他们都有一个读书页面，能够同步自己在豆瓣的账户，将自己的阅读经历放在博客中。我觉得这个idea非常有意思，原来博客不仅可以分享技术、分享感悟，还可以当作读书笔记，更加方便的记录自己的学习历程。
