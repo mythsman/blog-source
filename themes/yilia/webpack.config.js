@@ -4,7 +4,6 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanPlugin = require('clean-webpack-plugin');
 
-// 模板压缩
 // 详见：https://github.com/kangax/html-minifier#options-quick-reference
 
 var minifyHTML = {
@@ -22,7 +21,7 @@ module.exports = {
   output: {
     path: "./source",
     publicPath: "./",
-    filename: "[name].[chunkhash:6].js"
+    filename: "[name].js"
   },
   module: {
     loaders: [{
@@ -40,7 +39,7 @@ module.exports = {
       loader: 'url-loader?limit=500&name=img/[name].[ext]'
     }, {
       test: /\.(woff|svg|eot|ttf)\??.*$/,
-      loader: "file-loader?name=fonts/[name].[hash:6].[ext]"
+      loader: "file-loader?name=fonts/[name].[ext]"
     }]
   },
   alias: {
@@ -56,7 +55,7 @@ module.exports = {
     return [autoprefixer];
   },
   plugins: [
-    new ExtractTextPlugin('[name].[chunkhash:6].css'),
+    new ExtractTextPlugin('[name].css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
     }),
@@ -75,7 +74,7 @@ module.exports = {
       filename: '../layout/_partial/css.ejs'
     })
   ],
-  watch: true
+  watch: false
 }
 
 if (process.env.NODE_ENV === 'production') {

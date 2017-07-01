@@ -63,7 +63,7 @@ google_analytics: 'UA-99608806-1'
 favicon: /favicon.ico
 
 #你的头像url
-avatar: /images/avatar.gif
+avatar: /images/avatar.png
 
 #是否开启分享
 share_jia: false
