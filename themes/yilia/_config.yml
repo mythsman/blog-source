@@ -122,5 +122,6 @@ friends:
   callouweicheng(炜承学长): http://blog.callouweicheng.cn
   Decader_Luo(潘大佬): http://decader.cn/
   ZheWang(吉吉): http://zhewangchina.cn
+  Paladnix(岩巨): https://paladnix.github.io/
 
-aboutme: 本站点创建于2015年11月，采用Hexo开源框架，在yilia主题基础上进行修改，加入豆瓣插件同步读书电影信息，采用gulp进行压缩，利用sslforfree获取https证书，静态文件部署在阿里云VPS上，Nginx反向代理，Jupyter作为Web端后台以及在线编辑器，源码托管备份于GITHUB。
+aboutme: 本站点创建于2015年11月，采用Hexo开源框架，在yilia主题基础上进行修改，加入豆瓣插件同步读书电影信息，利用sslforfree获取https证书，静态文件部署在阿里云VPS上，Nginx反向代理，Jupyter作为Web端后台以及在线编辑器，源码托管备份于GITHUB。
