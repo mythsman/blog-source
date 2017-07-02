@@ -53,8 +53,10 @@ reward_type: 2
 # 打赏wording
 reward_wording: '好人一生平安'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
+# HTTPS://QR.ALIPAY.COM/FKX03362WLRQXYEJURYO90
 alipay: /images/alipay.png
 # 微信二维码图片地址
+# wxp://f2f0aKXwAfPrGOVnFTjyYS27CcdourkeCgyX
 weixin: /images/weixin.png
 
 # Miscellaneous
