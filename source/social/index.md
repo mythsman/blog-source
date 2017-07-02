@@ -20,3 +20,4 @@ title: 我的博客圈
 |[byvoid](https://www.byvoid.com/)|牛x的大佬，搞NOIP进的清华，能力超强，奇闻逸事网上流传了很多，最有名的大概就是报阿里星时候的评价表。。。|
 |[谢益辉](https://yihui.name/)|在美帝工作的经济学PhD,双语博客从05年更到现在，文笔也牛的不行，现在在RStudio做软件工程师|
 |[MartinRGB](http://www.martinrgb.com/)|13年西电毕业的交互设计师以及GUI设计师，看了眼博客，没啥说的，不愧是设计师。。。|
+|[魏楚阳](http://brianway.github.io/)|18年毕业的华科研究生，webporter的开发者，爬虫和数据分析的高端玩家，BAT随便进。。。|

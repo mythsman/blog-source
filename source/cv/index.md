@@ -48,8 +48,9 @@ title: 个人简介
 ## 技能清单
 以下均为我使用过的技能。
 
-- Web前端：HTML5/CSS3/Nodejs/Gulp/Jquery/Bootstrap/Thymeleaf/Ejs/Angular2/Hexo
+- Web前端：HTML5/CSS3/Nodejs/Gulp/Jquery/Bootstrap/Thymeleaf/Ejs/Angular2/Hexo/Webpack
 - Web后端：Django/SpringBoot
+- 测试框架: Junit/Eslint/Jscs/Istanbul/Travis CI
 - 应用程序：Qt/PyQt/Win32/Unity3D/SDL2
 - 数据管理：MySQL/Redis/SQLServer/Oracle
 - 图像处理：Matplotlib/Graph-tool/OpenCV/PIL
