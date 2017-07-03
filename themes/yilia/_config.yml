@@ -51,7 +51,7 @@ open_in_new: false
 # 打赏基础设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
 reward_type: 2
 # 打赏wording
-reward_wording: '好人一生平安'
+reward_wording: '只要五毛^.^'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
 # HTTPS://QR.ALIPAY.COM/FKX03362WLRQXYEJURYO90
 alipay: /images/alipay.png
@@ -126,4 +126,4 @@ friends:
   ZheWang(吉吉): http://zhewangchina.cn
   Paladnix(岩巨): https://paladnix.github.io/
 
-aboutme: 本站点创建于2015年11月，采用Hexo开源框架，在yilia主题基础上进行修改，加入豆瓣插件同步读书电影信息，利用sslforfree获取https证书，静态文件部署在阿里云VPS上，Nginx反向代理，Jupyter作为Web端后台以及在线编辑器，源码托管备份于GITHUB。
+aboutme: 本站点创建于2015年11月，采用Hexo开源框架，在yilia主题基础上进行修改，加入豆瓣插件同步读书电影信息，全站采用https协议，静态文件部署在阿里云VPS上，Nginx反向代理，Jupyter作为Web端后台以及在线编辑器，网站源码以及文章托管于GITHUB，欢迎大家互相交流学习。
