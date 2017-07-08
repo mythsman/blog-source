@@ -23,9 +23,48 @@ Arrays.sort默认采用的是TimSort的方法(即传统Mergesort的优化版本)
 
 > 使用java.io.File类的listFiles(FileFilter)和isDirectory方法，编写一个返回指定目录下所有子目录的方法。使用lambda表达式来代替FileFilter对象，再将它改写为一个方法的引用。
 
+```java
+import java.io.File;
+import java.io.FileFilter;
+
+public class Task2 {
+	public static void main(String[] args) {
+		File file=new File("D://");
+		//File[] files=file.listFiles((f)->f.isDirectory());
+		//File[] files=file.listFiles(File::isDirectory);
+		File[] files=file.listFiles(new FileFilter() {
+
+			@Override
+			public boolean accept(File pathname) {
+				return pathname.isDirectory();
+			}
+		});
+		for(File f : files){
+			System.out.println(f.getAbsolutePath());
+		}
+	}
+}
+```
+
 ## 第三题
 
 > 使用java.io.File类的list(FilenameFilter)方法，编写一个返回指定目录下、具有指定扩展名的所有文件。使用lambda表达式(而不是FilenameFilter)来实现。他会捕获闭合作用域中的哪些变量？
+
+```java
+import java.io.File;
+
+public class Task3 {
+	public static void main(String[] args){
+		File file=new File("D://");
+		String suffix=".txt";
+		String[] files=file.list((File dir,String name)-> name.endsWith(suffix));
+		for(String f:files){
+			System.out.println(f);
+		}
+	}
+}
+//捕获了suffix变量
+```
 
 ## 第四题
 
