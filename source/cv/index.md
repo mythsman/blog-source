@@ -56,12 +56,13 @@ title: 个人简介
 - 图像处理：Matplotlib/Graph-tool/OpenCV/PIL
 - 机器学习：scikit-learn/caffe/libsvm
 - 分布式：Hadoop/Spark mllib
-- 版本管理：Git
+- 版本管理：Git/Npm/Pip/Maven/Nexus
 - 常用工具：Nginx/Apache2/Jupyter/RabbitMQ/Docker/Linux下各类工具
 
 ---
 
 ## FAQs
+
 ### 你有什么个人业余爱好？
 事实上，除了平常写代码，我个人比较喜欢记博客，虽然主要是些技术类博客，但应该也算是业余爱好的吧。从我大一开始接触Linux的时候，我就渐渐养成了写博客的习惯。一开始主要是给自己做一个在线备忘录用，不过渐渐的，我发现我的博客不仅会影响我自己，也会影响其他人。于是我也就将这个习惯坚持了下来，一发现什么有趣的东西都会想着分享到博客上。
 除此之外，由于我不太喜欢运动，因此剩下的业余时间基本是放在了读书，看电影和玩游戏上。。

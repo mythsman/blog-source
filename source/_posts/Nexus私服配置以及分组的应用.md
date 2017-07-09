@@ -41,6 +41,7 @@ proxy类型存在的意义在于，在使用自己的私服时，如果仍需要
 ## maven配置
 这里顺便记分析下maven的配置。
 maven的配置文件就是settings.xml了，这个文件的基础配置大概是这样的:
+
 ```xml
     <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -58,15 +59,18 @@ maven的配置文件就是settings.xml了，这个文件的基础配置大概是
       <activeProfiles/>
     </settings>
 ```
+
 各个标签的具体用法可以参考官方文档，下面大体解释下一些重要配置。
 
-**localRepository**
+### localRepository
+
 ```xml
 <localRepository>/path/to/local/repo</localRepository>
 ```
+
 这个配置指明了本地maven库的包的地址。由于我们在使用maven时，可能会经常使用一些相同的包，为了提高提取效率以及减少中心库的压力，maven在第一次从远程下载某个包的时候就会将它放在本地的库中，方便以后直接取用。需要注意的是，在某些情况下，我们需要手动删除这里的包来保证我们使用的是最新版本的包。这个配置的默认值是在用户家目录下的.m2文件夹中，非常好找。
 
-**servers**
+### servers
 ```xml
   <servers>
     <server>
@@ -76,7 +80,7 @@ maven的配置文件就是settings.xml了，这个文件的基础配置大概是
     </server>
   </servers>
 ```
-这个配置的目的在于，当我们要向私服中去deploy自己的包的时候，显然我们至少得有写入的权限，这里就定义了已知server的用户名和密码，以及这个server的唯一ID。当我们在项目的pom.xml里添加发布的配置时
+这个配置的目的在于，当我们要向私服中去deploy自己的包的时候，显然我们至少得有写入的权限，这里就定义了已知server的用户名和密码，以及这个server的唯一ID。当我们在项目的pom.xml里添加发布的配置时,只要指定正确仓库的id就可以定位到相同id的server，并从中获取用户名和密码。
 ```xml
     <distributionManagement>
         <repository>
@@ -86,9 +90,8 @@ maven的配置文件就是settings.xml了，这个文件的基础配置大概是
         </repository>
     </distributionManagement>
 ```
-只要指定正确仓库的id就可以定位到相同id的server，并从中获取用户名和密码。
 
-**profiles**
+### profiles
 ```xml
   <profiles>
     <profile>
@@ -115,7 +118,7 @@ profiles里指定了我们的maven获取包的远程仓库的地址，每一个�
   </activeProfiles>
 ```
 
-**mirrors**
+### mirrors
 ```xml
   <mirrors>
     <mirror>
@@ -128,7 +131,7 @@ profiles里指定了我们的maven获取包的远程仓库的地址，每一个�
 ```
 mirrors配置的意义在于，我们有时候在获取中心库的包的时候，由于网络的原因会导致下载太慢，这时候我们就想使用一些网络较好的镜像来代替那个中心库。这里的mirrorOf参数配置的就是我们希望替代的repositoryId(支持多选，反选等等)。将镜像地址保存在url里。
 
-**proxies**
+### proxies
 ```xml
   <proxies>
     <proxy>
