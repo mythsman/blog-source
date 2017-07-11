@@ -21,3 +21,4 @@ title: 我的博客圈
 |[谢益辉](https://yihui.name/)|在美帝工作的经济学PhD,双语博客从05年更到现在，文笔也牛的不行，现在在RStudio做软件工程师|
 |[MartinRGB](http://www.martinrgb.com/)|13年西电毕业的交互设计师以及GUI设计师，看了眼博客，没啥说的，不愧是设计师。。。|
 |[魏楚阳](http://brianway.github.io/)|18年毕业的华科研究生，webporter的开发者，爬虫和数据分析的高端玩家，BAT随便进。。。|
+|[VoidKing](http://www.voidking.com/)|16级东北师大的软件工程硕士研究生，是个很勤奋的博主，有梦想有想法。|

@@ -209,10 +209,14 @@ proxies配置主要是用来在某些情况下通过配置用户密码，做到�
 </nexusConfiguration>
 ```
 这样一看就很清楚了，我们所有的手动操作其实都是映射到这个文件中。只是需要注意当我们手动修改了这个配置文件之后，我们得重启Nexus服务。。。
+于此同时，我们也要注意到，`$NEXUS_HOME/sonatype-work/nexus/storage`文件夹里存放了各个仓库的包，我们也可以将我们需要的包手动添加进来。
 
 
 ## 参考资料
 [Nexus Document](https://books.sonatype.com/nexus-book/reference/confignx-sect-manage-repo.html)
+
 [Maven Document](http://maven.apache.org/guides/)
+
 [Maven学习五之Nexus中各repository介绍](http://blog.csdn.net/woshixuye/article/details/8132780)
+
 [Nexus私服使Maven更加强大](http://blog.csdn.net/liujiahan629629/article/details/39272321)

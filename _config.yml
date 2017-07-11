@@ -106,7 +106,7 @@ feed:
   path: atom.xml
   limit: false
   hub:
-  content:
+  content: true
 
 
 #hexo-generator-sitemap
@@ -141,10 +141,6 @@ archive_generator:
 
 #hexo-excerpt
 excerpt_depth: 5
-
-#hexo-html-minifier
-html_minifier:
-  exclude: 
 
 #hexo-filter-flowchart
 sequence:
