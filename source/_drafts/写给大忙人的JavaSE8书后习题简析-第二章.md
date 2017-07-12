@@ -201,7 +201,7 @@ public class Task5 {
 ## 第六题
 > 第2.3节中的characterStream方法不是很好用，他需要先填充一个数组列表，然后再转变为一个流。试着编写一行基于流的代码。一个办法是构造一个从0开始到s.length()-1的整数流，然后使用s::charAt方法引用来映射它。
 
-考察IntSteam的用法，以及不同类型的Stream之间利用mapToObj来进行转换。
+考察IntSteam的用法，以及IntStream可以利用mapToObj来转换成其他类型的流。
 ```java
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -259,22 +259,241 @@ public class Task6 {
 System.out.println(Stream.of(1,2,3).limit(1).spliterator().estimateSize());
 System.out.println(Stream.iterate(1, x -> x).limit(1).spliterator().estimateSize());
 ```
-他们的返回结果并不是我们想象的`1 1`而是`3 9223372036854775807`。。。显然这个方法也不能准确的保证流的长度。。。看上去好像是因为spliterator处理的对象是没有考虑limit的。。。真是麻烦。。。
+他们的返回结果并不是我们想象的`1 1`而是`3 9223372036854775807`。。。显然这个方法也不能准确的保证流的长度。。。看上去好像是因为spliterator处理的对象是没有考虑limit的。。。
+从本质上讲，无限流其实就是一个迭代器，除非我们能判断迭代器是有终点的，否则我们是无法判断这个流是不是有限流。具体原因可以参照下面一题的解法。
 
 难怪作者大佬说这不是一个Good idea。。。
 
 
 ## 第八题
-> 编写一个方法`public static <T> Steam<T> zip(Stream<T> first,Stream<T> second)`,依次调换流first和second中元素的位置，直到其中一个流结束为止。
+> 编写一个方法`public static <T> Stream<T> zip(Stream<T> first,Stream<T> second)`,依次调换流first和second中元素的位置，直到其中一个流结束为止。
+
+这道题又是翻译的锅，所谓的“调换”意思其实是交替获取。。。看来再看翻译书的时候还是要注意身边放一个原文的。。。
+虽然意思清楚了，但是这道题要真正写的好还是很有难度的，主要的坑点在于如何处理无限流的情况。因此我们不能将流读取到list等容器，只能以迭代器的方式进行操作。而且我们在使用普通的转换函数的时候也是不太方便终止当前流的。所以这就需要用到一些平常比较少用的工具类了。
+这种zip操作可以帮我们更好的理解流的本质。我们可以看到，将两个无限流进行zip的函数竟然是可以直接返回的，这就说明这个运算一定是lazy的，即只有当取道这个流的时候才会去进行获取下一个值，而这就是迭代器的特征。
+参考了[stackOverflow](https://stackoverflow.com/questions/17640754/zipping-streams-using-jdk8-with-lambda-java-util-stream-streams-zip)的代码，我的zip代码该代码如下：
+
+```java
+import java.util.Iterator;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
+
+public class Task8 {
+
+    public static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
+        Iterator<T> firstIterator = first.iterator();
+        Iterator<T> secondIterator = second.iterator();
+        Iterator<T> iterator = new Iterator<T>() {
+            private boolean first = false;
+
+            @Override
+            public boolean hasNext() {
+                first = !first;
+                return first ? firstIterator.hasNext() : secondIterator.hasNext();
+            }
+
+            @Override
+            public T next() {
+                return first ? firstIterator.next() : secondIterator.next();
+            }
+        };
+        Iterable<T> iterable = () -> iterator;
+        boolean parallel = first.isParallel() || second.isParallel();
+        return StreamSupport.stream(iterable.spliterator(), parallel);
+    }
+
+    public void task8() {
+        Stream<Integer> stream1 = zip(Stream.of(1, 3, 5), Stream.of(2, 4, 6, 8, 10));
+        stream1.forEach(x -> System.out.print(String.format("%d ", x)));
+        System.out.println();
+
+        Stream<Integer> stream2 = zip(Stream.iterate(1, x -> x * 2), Stream.of(2, 4, 6, 8, 10));
+        stream2.forEach(x -> System.out.print(String.format("%d ", x)));
+        System.out.println();
+
+
+        Stream<Integer> stream3 = zip(Stream.iterate(1, x -> x * 2), Stream.iterate(1, x -> x * 3)).limit(10);
+        stream3.forEach(x -> System.out.print(String.format("%d ", x)));
+        System.out.println();
+
+    }
+
+    public static void main(String[] args) {
+        new Task8().task8();
+    }
+
+}
+```
+输出结果如下：
+```java
+1 2 3 4 5 6
+1 2 2 4 4 6 8 8 16 10 32
+1 1 2 3 4 9 8 27 16 81
+```
+可以看到这个函数是可以支持有限流和无限流的。
+
 
 ## 第九题
 > 将一个`Stream<ArrayList<T>>`中的全部元素连接为一个ArrayList<T>。试着用三种不同的聚合方式来实现。
 
+这道题就是总结reduce的三种用法，注意每种用法的用途和特点。
+```java
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
+public class Task9 {
+
+
+    public <T> ArrayList<T> join1(Stream<ArrayList<T>> stream) {
+        return stream.reduce((a1, a2) -> {
+            a1.addAll(a2);
+            return a1;
+        }).orElse(new ArrayList<T>());
+    }
+
+    public <T> ArrayList<T> join2(Stream<ArrayList<T>> stream) {
+        return stream.reduce(new ArrayList<>(), (x, y) -> {
+            x.addAll(y);
+            return x;
+        });
+    }
+
+    public <T> ArrayList<T> join3(Stream<ArrayList<T>> stream) {
+        return stream.reduce(new ArrayList<>(),
+                (result, added) -> {
+                    result.addAll(added);
+                    return result;
+                },
+                (result1, result2) -> {
+                    result1.addAll(result2);
+                    return result1;
+                });
+    }
+
+    public Stream<ArrayList<Integer>> initStream() {
+        ArrayList<Integer> list1 = new ArrayList<>();
+        list1.add(0, 2);
+        list1.add(1, 3);
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list2.add(0, 4);
+
+        return Stream.of(list1, list2);
+    }
+
+    public void task9() {
+
+
+        join1(initStream()).forEach(x -> System.out.print(String.format("%d ", x)));
+        System.out.println();
+
+        join2(initStream()).forEach(x -> System.out.print(String.format("%d ", x)));
+        System.out.println();
+
+        join3(initStream()).forEach(x -> System.out.print(String.format("%d ", x)));
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        new Task9().task9();
+    }
+
+}
+```
+
 ## 第十题
 > 编写一个可以用于计算`Stream<Double>`平均值的聚合方法。为什么不能直接计算出总和再除以count()？
 
+暂且没有找到更加方便的利用聚合函数进行计算的方法，因为不太方便处理这个count。当然，直接转化成数组来处理就不再考虑中吧。
+显然不能直接计算count，因为这就会导致流的终止，无法继续下面的计算了。除非完全拷贝这个流，但是这样效率就特别低了。。。
+比较中庸的办法是创建一个对象，让他记录这个count信息：
+```java
+import java.util.stream.Stream;
+
+public class Task10 {
+
+    class Item {
+        private int count;
+        private double sum;
+
+        public Item() {
+            count = 0;
+            sum = 0;
+        }
+
+        public Item add(double num) {
+            count++;
+            sum += num;
+            return this;
+        }
+
+        public Item add(Item num) {
+            count += num.count;
+            sum += num.sum;
+            return this;
+        }
+
+        public double getAverage() {
+            return sum / count;
+        }
+    }
+
+    public Double mean(Stream<Double> stream) {
+        return stream.reduce(new Item(), Item::add, Item::add).getAverage();
+    }
+
+    public void task10() {
+        Stream<Double> doubleStream = Stream.of(1.2, 2.3, 3.4, 4.5, 5.6);
+        System.out.println(mean(doubleStream));//3.4
+    }
+
+    public static void main(String[] args) {
+        new Task10().task10();
+    }
+
+}
+```
+但是这样的代码有点冗长，我们其实可以引入一个原子类来记录这个count：
+```java
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
+
+public class Task10 {
+
+    public Double mean1(Stream<Double> stream) {
+        AtomicInteger count = new AtomicInteger(0);
+        return stream.reduce(0., (total, num) -> {
+            int now = count.incrementAndGet();
+            return (total * (now - 1) + num) / now;
+        });
+
+    }
+
+    public Double mean2(Stream<Double> stream) {
+        AtomicInteger count = new AtomicInteger(0);
+        return stream.reduce(0., (total, num) -> {
+            count.incrementAndGet();
+            return total + num;
+        }) / count.doubleValue();
+
+    }
+
+    public void task10() {
+        System.out.println(mean2(Stream.of(1.2, 2.3, 3.4, 4.5, 5.6)));
+        System.out.println(mean2(Stream.of(1.2, 2.3, 3.4, 4.5, 5.6)));
+    }
+
+    public static void main(String[] args) {
+        new Task10().task10();
+    }
+
+}
+```
+我们这里用了两种方法，原则上都可以，只是方法一更加适合比较长的流，数字不容易溢出，方法二速度更快一点。
+
 ## 第十一题
 > 我们应该可以将流的结果并发收集到一个`ArrayList`中，而不是将多个`ArrayList`合并起来。由于对集合不相交部分的并发操作是线程安全的，所以我们假设这个`ArrayList`的初始大小即为流的大小。如何能做到这一点？
+
+
 
 ## 第十二题
 > 如第2.13节所示，通过更新一个`AtomicInteger`数组来计算一个并行`Stream<String>`宏的所有短单词。使用原子操作方法getAndIncreament来安全的增加每个计数器的值。
