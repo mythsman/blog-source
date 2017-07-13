@@ -1,4 +1,36 @@
 
+## 第十一题
+> 我们应该可以将流的结果并发收集到一个`ArrayList`中，而不是将多个`ArrayList`合并起来。由于对集合不相交部分的并发操作是线程安全的，所以我们假设这个`ArrayList`的初始大小即为流的大小。如何能做到这一点？
+
+这题没怎么看懂，好像就是考察原子类。。。
+```java
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
+
+public class Task11 {
+
+    public void task11() throws IOException {
+        Stream<String> stream = Stream.of("1", "2", "3", "4", "5");
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            list.add("");
+        }
+
+        AtomicInteger atomic = new AtomicInteger();
+        stream.parallel().forEach(x -> {
+            list.set(atomic.getAndIncrement(), x);
+        });
+        list.forEach(System.out::println);
+    }
+
+    public static void main(String[] args) throws IOException {
+        new Task11().task11();
+    }
+}
+```
 
 ## 第十二题
 > 如第2.13节所示，通过更新一个`AtomicInteger`数组来计算一个并行`Stream<String>`宏的所有短单词。使用原子操作方法getAndIncreament来安全的增加每个计数器的值。
