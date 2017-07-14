@@ -117,6 +117,8 @@ profiles里指定了我们的maven获取包的远程仓库的地址，每一个�
     <activeProfile>nexus</activeProfile>
   </activeProfiles>
 ```
+同时，我们也要注意着里面的repository标签，这个标签指定的是我们需要额外查找的仓库。比如我在搭建opendaylight环境时，maven需要查找他对应的包，但是maven中心库里默认没有opendaylight的库，那么我们就需要把这个库的地址加入这个repository标签里。这样每次搜索包的时候就可以顺便搜索opendaylight自己的repository。
+还需要注意一点，就是我们只能从repositories标签里下载普通的包，不能下载插件。如果我们需要从一个仓库里下载插件，我们就需要用`pluginRepositories`的标签。具体用法可以参见官方文档。
 
 ### mirrors
 ```xml
@@ -130,6 +132,7 @@ profiles里指定了我们的maven获取包的远程仓库的地址，每一个�
   </mirrors>
 ```
 mirrors配置的意义在于，我们有时候在获取中心库的包的时候，由于网络的原因会导致下载太慢，这时候我们就想使用一些网络较好的镜像来代替那个中心库。这里的mirrorOf参数配置的就是我们希望替代的repositoryId(支持多选，反选等等)。将镜像地址保存在url里。
+特别配置mirror的时候尤其需要小心，那就是我们使用了mirror之后很有可能覆盖了我们不想覆盖的repository，因此我们尤其要注意这个mirrorOf标签的值。
 
 ### proxies
 ```xml
