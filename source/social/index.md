@@ -23,3 +23,4 @@ title: 我的博客圈
 |[魏楚阳](http://brianway.github.io/)|18年毕业的华科研究生，webporter的开发者，爬虫和数据分析的高端玩家，BAT随便进。。。|
 |[VoidKing](http://www.voidking.com/)|16级东北师大的软件工程硕士研究生，是个很勤奋的博主，有梦想有想法。|
 |[颜开](http://www.yankay.com/)|对Java以及分布式数据库等有着非常深厚的积淀，现在任职于EMC，可惜的是博客不怎么更了|
+|[李钊](https://livc.io/)|东北大学14级同届本科，能力很强，现在百度深度学习实验室。|
