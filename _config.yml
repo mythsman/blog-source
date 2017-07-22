@@ -142,17 +142,13 @@ archive_generator:
 #hexo-excerpt
 excerpt_depth: 5
 
-#hexo-filter-flowchart
-sequence:
-  # webfont:     # optional, the source url of webfontloader.js
-  # snap:        # optional, the source url of snap.svg.js
-  # underscore:  # optional, the source url of underscore.js
-  # sequence:    # optional, the source url of sequence-diagram.js
-  # css: # optional, the url for css, such as hand drawn theme 
-  options: 
-    theme: 
-    css_class: 
-
-# Markdown-it config
-## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
-markdown:
+marked:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+  modifyAnchors: ''
+  autolink: false
