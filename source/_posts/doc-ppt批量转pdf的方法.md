@@ -26,8 +26,8 @@ unoconv -f pdf *.doc
 这就能一次性转换所有的doc文件。
 
 ## 字体支持问题
-在使用的过程中发现，在对文章进行转换的时候，经常会有乱码的现象。研究一下发现并不是字符集乱码，而是缺失字体文件，也就是windows里的很多字体在linux里面是没有的。因此我们只要将windows下的字体文件拷贝到linux下面就行了。
-### 步骤
+在使用的过程中发现，在对文章进行转换的时候，经常会有乱码的现象。研究一下发现并不是字符集乱码，而是缺失字体文件，也就是windows里的很多字体在linux里面是没有的。因此我们只要将windows下的字体文件拷贝到linux下面就行了。具体步骤如下：
+
 1. 复制windows下的`C://WINDOWS/Fonts/`下的字体文件，拷贝到`/usr/share/fonts`文件夹下。
 2. 删除一些不支持的文件（比如以.fon后缀的文件）。
 3. 执行`sudo mkfontscale`、`sudo mkfontdir `、`sudo fc-cache`，加载字体。

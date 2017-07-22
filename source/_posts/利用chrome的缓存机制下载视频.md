@@ -14,7 +14,6 @@ tags:
 `C:/Users/Administrator/AppData/Local/Google/Chrome/User Data/Default/Pepper Data/Shockwave Flash/`
 
 1. 由于这个AppData目录是隐藏的，因此首先要在文件夹选项里勾选“显示隐藏的文件”选项。
-
 2. 找到这个目录，删掉里面的内容，然后打开需要加载的视频网页，在开始缓存视频文件的时候，这个Shockwave Flash文件夹下会出现类似"tmp"名字的文件，随着视频的缓存大小会不断加大，这个就是我们需要的缓存文件了，这里的文件在视频窗口关掉的同时就会被删除，所以别急着关视频窗口哦～等他缓冲好，拷贝出来，扩展名一改（一般的.mp4之类的都可以），直接用播放器就能看了～～
 
 ## ubuntu下路径

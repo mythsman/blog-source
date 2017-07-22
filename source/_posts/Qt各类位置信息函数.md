@@ -190,4 +190,4 @@ int main(int argc, char *argv[])
 
 ## 各个函数的意义简图
 
-![](/images/10/24/2/2.png)
+![](/images/2015/10/24/2/2.png)

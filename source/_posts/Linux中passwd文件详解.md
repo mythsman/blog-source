@@ -12,6 +12,7 @@ Linux的用户信息很多都保存在这个/etc/passwd文件中，以前觉得�
 
 ## 文件样例
 
+```
 root@myths-X450LD:/home# cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
@@ -54,6 +55,7 @@ smmta:x:118:128:Mail Transfer Agent,,,:/var/lib/sendmail:/bin/false
 smmsp:x:119:129:Mail Submission Program,,,:/var/lib/sendmail:/bin/false
 guest-g1Jo1T:x:120:130:Guest,,,:/tmp/guest-g1Jo1T:/bin/bash
 ```
+
 这是我这里的passwd文件配置，可以看到有很多条记录，每条记录有7个以“：”分隔的字段他们的意义分别是：
 
 	用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell

@@ -53,15 +53,10 @@ Valid XHTML 1.0 Transitional
 仅仅从这个文件中，我们就可以至少得到以下的重要信息：
 
 1. 当访问本机的时候，默认进入的页面是/var/www/html/index.html。
-
 2. 配置系统的说明在/usr/share/doc/apache2/README.Debian.gz中。
-
 3. 完整使用手册可以通过安装apache2-doc 进行下载。
-
 4. 主配置文件为/etc/apache2/apache2.conf。
-
 5. 启动和关闭apache2服务可以通过执行命令/etc/init.d/apache2 start（stop / restart）当然也可以是 service apache2 start (stop / restart)。这里一定要注意记得！记得！加root权限！这里不加root权限并没有明显的提示（好坑），当遇到问题的时候很难让人想到是这里出的错，所以一定要记得！记得！加root权限！
-
 6. 默认情况下apache2拒绝访问除/var/www 和/usr/share文件夹外的其他文件，这种权限是通过apache2.conf文件来控制的.
 
 默认的apache2.conf为：
@@ -345,5 +340,4 @@ apache2的简单配置基本就是这些，不需要百度，我们也是完全�
 注：
 
 1. 修改完配置文件后记得重启服务
-
 2. 可以顺手吧/var/www的权限设置为777方便修改网页

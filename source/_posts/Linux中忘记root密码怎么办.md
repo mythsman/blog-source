@@ -8,6 +8,7 @@ tags:
  - Linux
 ---
 
+## 前言
 白天倒腾权限系统的，结果不知道怎么就把主用户的sudo权限给弄没了，结果是各种用不了root权限。sudoers文件打不开，usermod命令也用不了，sudo -i就不提了，而且ubuntu是无法直接以root身份登陆的，简直无解。没办法，只有倒腾起了之前不敢动的recovery模式。
 
 ## 方法

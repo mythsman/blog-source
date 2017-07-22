@@ -29,7 +29,7 @@ A typical usage of a forward proxy is to provide Internet access to internal cli
 
 关于Apache的安装和配置文件的简介可以看[《apache2服务器的搭建与配置》](/2015/11/04/1/)。
 
-#### 加载模块
+### 加载模块
 
 配置代理服务器需要用到proxy_http和proxy模块，首先查看`/etc/apache2/mods-enabled/` 目录下有没有`proxy_http.load proxy.load proxy.conf` 这些东西，如果没有，就得先激活下这两个模块：
 ```
@@ -38,7 +38,7 @@ $sudo a2enmod proxy
 ```
 如果显示proxy_http无法激活，就先把本地的proxy.conf删掉，再激活即可。
 
-#### 配置代理
+### 配置代理
 
 事实上，下面的配置可以写在配置主文件(apache2.conf)包含的任何文件中，但是为了方便管理和区分，我们把代理服务器的配置信息写在`/etc/apache2/mods-enabled/proxy.conf`里。
 

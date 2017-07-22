@@ -18,13 +18,12 @@ $$dp[i]=Min(dp[j]+M+(sum[i]-sum[j])^2),j\in [1,i),i\in [1,n]$$
 $$\begin{aligned} & dp[x]+M+(sum[i]-sum[x])^2\ \lt dp[y]+M+(sum[i]-sum[y])^2\end{aligned}$$
 成立。
 将上式进行变形，可以得到一种类似斜率的表达形式:
-$$
-(dp[x]+num[x]^2-(dp[y]+num[y]^2))/(2*(num[x]-num[y]))<sum[i]
-$$
-令
-$$
-Cmp(x,y)=(dp[x]+num[x]^2-(dp[y]+num[y]^2))/(2*(num[x]-num[y]))
-$$
+$$(dp[x]+num[x]^2-(dp[y]+num[y]^2))/(2*(num[x]-num[y]))<sum[i]$$
+
+令:
+
+$$Cmp(x,y)=(dp[x]+num[x]^2-(dp[y]+num[y]^2))/(2*(num[x]-num[y]))$$
+
 
 现在从左到右，设$x\lt y\lt z$，如果$Cmp(z,y)\lt Cmp(y,x)$，那么y点便永远不可能成为最优解，可以直接将它踢出我们的最优解集。同时，由于$sum[i]$单调增，所以如果$Cmp(y,x)\lt sum[i]$那么x点也不可能成为最优解。
 据此，我们可以便可以通过维护这样的一个队列，每加入一个元素就判断排除所有不可能是最优解的点从而进行优化。

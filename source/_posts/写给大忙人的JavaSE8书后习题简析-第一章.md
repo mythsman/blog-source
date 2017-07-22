@@ -266,6 +266,6 @@ public class Task9 {
 第二问不是很清楚。。。
 
 
-## 参考资料
+# 参考资料
 [Java SE 8 for the Really Impatient](https://doc.lagout.org/programmation/Java/Java%20SE%208%20for%20the%20Really%20Impatient%20%5BHorstmann%202014-01-24%5D.pdf)
 [Answers found in github](https://github.com/DanielChesters/java-SE-8-Really-Impatient)
