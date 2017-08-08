@@ -51,7 +51,7 @@ open_in_new: false
 # 打赏基础设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
 reward_type: 2
 # 打赏wording
-reward_wording: '只要五毛^.^'
+reward_wording: '欢迎留言^.^'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
 # HTTPS://QR.ALIPAY.COM/FKX03362WLRQXYEJURYO90
 alipay: /images/alipay.png
