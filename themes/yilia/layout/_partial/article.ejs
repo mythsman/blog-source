@@ -18,8 +18,8 @@
         <%- post.content %>
         <% if (post.layout == "post") { %>
         <blockquote>
-          <p>本文标题：<a href="<%- post.permalink %>" ><%- post.title %></a></p>
-          <p>永久链接：<a href="<%- post.permalink %>" ><%- post.permalink %></a></p>
+          <p>本文标题：<a href="<%- post.permalink %>"> <%- post.title %></a></p>
+          <p>永久链接：<a target="_blank" href="https://github.com/mythsman/blog/blob/master/source/_posts/<%- post.title %>.md" >GITHUB</p></a>
           <p>文章来源：<a href="<%- url_for() %>" >Myths的个人博客</a></p>
           <p>发布时间：<a href="<%- post.permalink %>" ><%- date(post.date, 'YYYY年MM月DD日') %></a></p>
           <p>文章作者：<a href="<%- url_for('about') %>">myths</a></p>
