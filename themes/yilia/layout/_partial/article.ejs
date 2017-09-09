@@ -18,11 +18,11 @@
         <%- post.content %>
         <% if (post.layout == "post") { %>
         <blockquote>
-          <p>本文标题：<a href="<%- post.permalink %>"><%- post.title %></a></p>
-          <p>永久链接：<a target="_blank" href="https://github.com/mythsman/blog/blob/master/source/_posts/<%- post.title %>.md" >GITHUB</p></a>
-          <p>文章来源：<a href="<%- url_for() %>" >Myths的个人博客</a></p>
-          <p>发布时间：<a href="<%- post.permalink %>" ><%- date(post.date, 'YYYY年MM月DD日') %></a></p>
-          <p>文章作者：<a href="<%- url_for('about') %>">myths</a></p>
+          <p>本文标题：<%- post.title %></p>
+          <p>文章字数：<span class="post-count"><%= wordcount(post.content) %></span></p>
+          <p>阅读时间：<span class="post-count"><%= min2read(post.content,{cn: 500,en:400}) %>分钟</span></p>
+          <p>编辑链接：<a target="_blank" href="https://github.com/mythsman/blog/blob/master/source/_posts/<%- post.title %>.md" >GITHUB</p></a>
+          <p>发布时间：<%- date(post.date, 'YYYY年MM月DD日') %></p>
           <p>许可协议：<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商用-相同方式共享4.0</a></p>
         </blockquote>
        <% } %>
