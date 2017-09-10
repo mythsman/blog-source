@@ -178,7 +178,7 @@ public class Task7 {
 
 ## 第八题
 
-> 当一个lambda表达式捕获了如下增强for循环中的值时，会发生什么？这样做是否合法？每个lambda表达式都捕获了一个不同的值，还是他们都获得了最终的值？如果使用传统的for循环，例如for (int i=0;i<names.length;i++),又会发生什么？
+> 当一个lambda表达式捕获了如下增强for循环中的值时，会发生什么？这样做是否合法？每个lambda表达式都捕获了一个不同的值，还是他们都获得了最终的值？如果使用传统的for循环，例如`for (int i=0;i<names.length;i++)`,又会发生什么？
 ```
 String[] names = { "Peter", "Paul", "Mary" };
 List<Runnable> runners = new ArrayList<>();
