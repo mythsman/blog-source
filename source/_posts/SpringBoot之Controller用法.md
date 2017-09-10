@@ -59,6 +59,31 @@ public class IndexController {
 ```
 我们可以指定这个路径，参数，方法，头信息，来作为一个Controller的入口。当然，通常我们只需要指定path就行了。
 
+### 对象转json或xml
+这里有一个使用的小窍门，比如有时候我们希望返回json字符串，我们当然可以调用jackson,gson,fastjson等等工具来组合数据，但是这样显然比较麻烦。其实springboot自带了将对象持久化的工具，只要我们在`produces`参数中指定头信息，就可以将返回的对象直接转换为json或xml。比如:
+```java
+package com.mythsman.controller;
+
+import com.mythsman.bean.TestBean;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestController {
+
+    @RequestMapping(value = "test", produces = {"application/json;charset=UTF-8"})
+    public TestBean test() {
+        TestBean testBean = new TestBean();
+        testBean.setName("myths");
+        testBean.setAge(12);
+        return testBean;
+    }
+
+}
+```
+访问后的返回结果就是`{"name":"myths","age":12}`。同理，也可以自动转换成xml格式，不过xml格式对与map等的数据结构无法支持，因此我们还是建议采用json。
+
+
 ### 作用对象
 这个注解可以注解一个函数，也可以注解一个类。当注解一个类时，类中所有的方法都会在这个基础上再进行过滤：
 ```java

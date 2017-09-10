@@ -26,7 +26,7 @@
           <p>发布时间：<%- date(post.date, 'YYYY年MM月DD日') %></p>
           <p>许可协议：<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商用-相同方式共享4.0</a></p>
 		相关推荐：
-		<%- list_related_posts({maxCount: 10, orderBy: 'random'}) %>
+		<%- list_related_posts({maxCount: 10, orderBy: 'date'}) %>
         </blockquote>
 		
        <% } %>
