@@ -156,7 +156,7 @@ count2 = 48 in 7 ms.
 ## 第四题
 > 假设你有一个数组int[] values={1,4,9,16}。那么Stream.of(values)的结果是什么？你如何获得一个int类型的流。
 
-他返回的是一个引用对象的流，这个引用对象既不是int(int不是引用)，也不是Integer。。。我们只能用`Stream<Object>`来接收他。。。事实上Java8提供了的IntStream来专门处理int类型的流。。。
+他返回的是一个引用对象的流，这个引用对象既不是int(int不是引用)，也不是Integer。。。我们只能用`Stream<Object>`来接收他。。。事实上Java8提供了的IntStream来专门处理int类型的流。。。我们知道，java中泛型是只能用于对像的而不能用于基本类型的，因此我们通常会将int,double等基本类型进行"装箱"成Integer,Double这样的对象。但是这样的话计算时的时间空间消耗就很大，因此java的设计者们对这些基本类型的stream进行了特殊处理，创造了IntStream,DoubleStream这类东西。同时，这些东西还附带了一些额外的统计功能，用起来更加方便，减少了写一些无谓的统计方法。
 ```java
 import java.io.IOException;
 import java.util.stream.IntStream;
