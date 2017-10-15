@@ -29,4 +29,3 @@ title: 关于我
 |Email|dqz48548263@qq.com|
 |Github|[mythsman](https://github.com/mythsman)|
 
-PS:想要更加进一步了解我，可以移步我的[个人简历](https://blog.mythsman.com/cv/)哦～～～
