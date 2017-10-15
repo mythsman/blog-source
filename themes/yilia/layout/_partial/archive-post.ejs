@@ -7,7 +7,7 @@
     	 <%- partial('post/title', {class_name: 'archive-article-title'}) %>
         <div class="article-info info-on-left">
 			<span style="font-size:10px;font-weigth:400" class="post-count">文章字数：<%=wordcount(post.content)%></span>
-			<span style="font-size:10px;font-weigth:400" class="post-count">阅读时间：<%=min2read(post.contenti,{cn: 500,en:400})%>min</span>
+			<span style="font-size:10px;font-weigth:400" class="post-count">阅读时间：<%=min2read(post.content,{cn: 500,en:400})%>min</span>
         </div>
         <div class="article-info info-on-right">
           <%- partial('post/tag') %>
