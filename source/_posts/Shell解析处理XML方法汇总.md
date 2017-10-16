@@ -53,20 +53,20 @@ xmllint至少支持下面几个常用功能：
 </books>
 ```
 
-**执行xpath查询：**
+#### 执行xpath查询
 ```bash
 myths@business:~$ xmllint --xpath "//book[@id=2]/name/text()" sample.xml
 book2
 ```
 
-**去空格：**
+#### 去空格
 ```xml
 myths@business:~$ xmllint --noblanks sample.xml
 <?xml version="1.0"?>
 <books><book id="1"><name>book1</name><price>100</price><license/></book><book id="2"><name>book2</name><price>200</price></book><book id="3"><name>book3</name><price>300</price></book></books>
 ```
 
-**格式化：**
+#### 格式化
 ```xml
 myths@business:~$ xmllint --format sample.xml
 <?xml version="1.0"?>
@@ -86,7 +86,7 @@ myths@business:~$ xmllint --format sample.xml
   </book>
 </books>
 ```
-**xsd校验：**
+#### xsd校验
 ```xml
 myths@business:~$ cat sample.xsd
 <?xml version="1.0" encoding="utf-8"?>
@@ -113,7 +113,7 @@ sample.xml validates
 ```
 注意校验结果信息是输出到stderr中的，工具默认会把原文件回显到stdout里，可以加--noout参数关闭stdout回显。
 
-**流传递：**
+#### 流传递
 xmllint默认是传递文件名，如果我们希望用通过管道传递文件流的方式传递数据，我们可以这样弄：
 ```xml
 myths@business:~$ cat sample.xml |xmllint --format -
@@ -135,6 +135,33 @@ myths@business:~$ cat sample.xml |xmllint --format -
   </book>
 </books>
 ```
+#### 奇怪报错"XPath set is empty"
+这个问题在使用xmllint的xpath功能时候会经常遇到，其实原因主要是xml文件自带了名空间，比如maven的pom文件的开头：
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+```
+或者maven的setting文件的开头：
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+```
+他们都会有个xmlns的属性，表示该xml文件的名空间。如果对这种文件直接执行查找则会报错：
+```bash
+myths@business:~/cucumber/code/device# xmllint --xpath "/project" pom.xml 
+XPath set is empty
+```
+解决方案要么把文件的xmlns属性去掉，要么就只能采用下面这种变通的办法指定节点名：
+```bash
+myths@business:~/cucumber/code/device# xmllint --xpath "/*[local-name()='project']" pom.xml 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+	<modelVersion>4.0.0</modelVersion>  
+...
+</project>
+```
+
 
 ## xpath
 ### 简述
@@ -165,11 +192,15 @@ book2
 book3
 
 ```
+
+### 对比xmllint
 xpath相比xmllint的xpath功能有一点点区别很重要，如果xpath匹配了多个结果，那么xpath就会分行输出，而xmllint则会揉到一行：
 ```bash
 myths@business:~$ xmllint --xpath "//book/name/text()" sample.xml
 book1book2book3
 ```
+除此之外，xmllint工具相对比较稳定，在不同的系统内的使用参数基本固定。而xpath工具不是很标准，在不同系统内的默认版本之间甚至不互相兼容。比如在ubuntu14.04内默认用法是`/usr/bin/xpath [options] -e query [-e query...] [filename...]`,而在suse12内的默认用法却是`/usr/bin/xpath [filename] query`。这会很容易导致相同脚本对不同系统的不兼容性。
+
 
 ## xml2
 ### 简述
