@@ -18,7 +18,7 @@ title: 个人简介
  - Github: http://github.com/mythsman
  - 期望职位：IT软件研发工程师，云计算研发工程师
  - 期望薪资：税前月薪12k以上，特别喜欢的公司可例外
- - 期望城市：苏州（优先）、南京、杭州、上海
+ - 期望城市：苏州、南京、杭州、上海
 ---
 
 ## 工作履历
@@ -29,19 +29,21 @@ title: 个人简介
 - 中国计算机学会ccf软件能力认证top2.39%
 
 ### 大二(2015-2016)
-- GPA专业排名Top2（并因此获得苏州大学各类奖项）
+- GPA专业排名第二（并因此获得苏州大学各类奖项）
 - 独立开发《基于caffe的验证码识别系统》（并因此获得苏州大学挑战杯大学生课外学术科技竞赛一等奖）
 - 软件著作权《基于Geohash的相似轨迹查询系统》(并因此获得中国软件设计大赛优秀奖)
 - 作为实验师，合作发表论文《Efficient evaluation of shortest travel-time path queries through spatial mashups》(发表到GeoInformatica)
 - 作为大一C语言课程助教，参与课程辅导试卷批改等。
 
-### 大三(2017-至今)
-- 基于spark的KMeans算法的优化与分布式实现,获得”全国高校云计算应用创新大赛技能赛二等奖第一名”
+### 大三(2017-2018)
+- 参与”全国高校云计算应用创新大赛技能赛”，完成"基于spark的KMeans算法的优化与分布式实现",获得二等奖
 - 主持完成基于Unity引擎的解谜类游戏《Cube》的开发
 - 参与省级大学生创新创业项目"面向大规模在线社交网络数据节能存储机制研究"，并作为主要实施者
 - 微信公众号"自在畅学"后台开发
-- 开发开源软件"基于Hexo框架的豆瓣读书电影同步插件"
-- 华为苏州研究所暑期实习生
+- 开发开源软件"基于Hexo框架的豆瓣读书电影同步插件"，下载量约1k。
+
+### 大四(2017-至今)
+- 华为苏州研究所SDN控制器暑期实习生，主要负责:动态门禁代码适配，版本号机制的落地，基础质量看板开发，Cucumber用例关联需求看板开发，LLT打桩函数统计工具开发以及各种运维脚本的开发。
 
 ---
 
@@ -50,15 +52,14 @@ title: 个人简介
 
 - Web前端：HTML5/CSS3/Nodejs/Gulp/Jquery/Bootstrap/Thymeleaf/Ejs/Angular2/Hexo/Webpack
 - Web后端：Django/SpringBoot
-- 测试框架: Junit/Eslint/Jscs/Istanbul/Travis CI
+- 测试框架: Junit/Eslint/Jscs/Travis CI
 - 应用程序：Qt/PyQt/Win32/Unity3D/SDL2
 - 数据管理：MySQL/Redis/SQLServer/Oracle
 - 图像处理：Matplotlib/Graph-tool/OpenCV/PIL
 - 机器学习：scikit-learn/caffe/libsvm
 - 分布式：Hadoop/Spark mllib
 - 版本管理：Git/Npm/Pip/Maven/Nexus
-- 常用工具：Nginx/Apache2/Jupyter/RabbitMQ/Docker/Linux下各类工具
-
+- 常用工具：Nginx/Apache2/Jupyter/Docker/Linux下各类工具
 ---
 
 ## FAQs
