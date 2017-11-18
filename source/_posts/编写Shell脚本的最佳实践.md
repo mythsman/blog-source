@@ -303,6 +303,23 @@ wait
 ```
 当然，这里并行的次数不能太多，否则机器会卡死。稍微正确的做法比较复杂，以后再讨论，如果图省事可以使用parallel命令来做，或者是用上面提到的xargs来处理。
 
+## 全文本检索
+我们知道，当我们想在文件夹下所有的txt文件中检索某一个字符串(比如233)的时候，我们可能会用类似这样的命令：
+```bash
+find . -name '*.txt' -type f | xargs grep 2333
+```
+很多情况下，这个命令会想我们所想的找到对应的匹配行，但是我们需要注意两个小问题。
+find命令会符合要求的匹配文件名，但是如果文件名包含**空格**，这时候将文件名传给grep的时候就会有问题，这个文件就会被当成两个参数，这时候就要加一层处理，保证用空格分开的文件名不会被当成两个参数：
+```bash
+find . -type f|xargs -i echo '"{}"'|xargs grep 2333
+```
+
+有时候，文件的字符集可能跟终端的字符集不一致，这时候就会导致grep在搜索时将文件当成二进制文件从而报`binary file matches`之类的问题。这时候要么用iconv之类的字符集转换工具将字符集进行切换，要么就在不影响查找的情况下对grep加-a参数，将所有文件看成文本文件:
+```bash
+find . -type f|xargs grep -a 2333
+```
+
+
 ## 使用新写法
 这里的新写法不是指有多厉害，而是指我们可能更希望使用较新引入的一些语法，更多是偏向代码风格的，比如
 1. 尽量使用`func(){}`来定义函数，而不是`func{}`
@@ -359,3 +376,4 @@ wait
 [BashGuide/Practices](http://mywiki.wooledge.org/BashGuide/Practices)
 [Obsolete and deprecated syntax](http://wiki.bash-hackers.org/scripting/obsolete)
 [ANSI/VT100 Control sequences](http://misc.flogisoft.com/bash/tip_colors_and_formatting)
+[what-makes-grep-consider-a-file-to-be-binary](https://unix.stackexchange.com/questions/19907/what-makes-grep-consider-a-file-to-be-binary)
