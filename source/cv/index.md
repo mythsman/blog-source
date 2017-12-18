@@ -42,24 +42,8 @@ title: 个人简介
 - 开发开源软件"基于Hexo框架的豆瓣读书电影同步插件"，下载量约1k。
 
 ### 大四(2017-至今)
-- 华为苏州研究所SDN控制器暑期实习生，主要负责运维和度量相关工作，具体包括:动态门禁代码适配，版本号机制的落地，基础质量看板开发，Cucumber用例关联需求看板开发，LLT打桩函数统计工具开发以及各种运维脚本的开发。
+- 华为苏州研究所SDN控制器暑期实习生，主要负责CI,Devops和度量相关工作，具体包括:动态门禁代码适配，版本号机制的落地，基础质量看板开发，Cucumber用例关联需求看板开发，LLT打桩函数统计工具开发以及各种运维脚本的开发。
 
----
-
-## 技能清单
-以下均为我使用过的技能和工具。
-
-- Web前端：HTML5/CSS3/Nodejs/Gulp/Jquery/Bootstrap/Thymeleaf/Ejs/Angular2/Hexo/Webpack
-- Web后端：Django/SpringBoot
-- 测试框架: Junit/Eslint/Jscs/Travis CI/Cucumber
-- 应用程序：Qt/PyQt/Win32/Unity3D/SDL2
-- 数据管理：MySQL/Redis/SQLServer/Oracle
-- 图像处理：Matplotlib/Graph-tool/OpenCV/PIL
-- 机器学习：scikit-learn/caffe/libsvm
-- 分布式：Hadoop/Spark mllib
-- 版本管理：Git/Npm/Pip/Maven/Nexus
-- 常用工具：Nginx/Apache2/Jupyter/Docker/Linux下各类工具
-- 运维工具：Ansible/Shell-Expect脚本
 ---
 
 ## FAQs
