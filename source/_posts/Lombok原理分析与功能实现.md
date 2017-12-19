@@ -331,7 +331,7 @@ java -cp classes com.mythsman.test.App
 4. 用javap显示编译后的App.class文件(非必须，方便看结果)
 5. 执行测试类
 
-好了，进入项目的根目录，当前的目录结构应该是这样的(test文件夹不去管他):
+好了，进入项目的根目录，当前的目录结构应该是这样的:
 ```
 .
 ├── pom.xml
