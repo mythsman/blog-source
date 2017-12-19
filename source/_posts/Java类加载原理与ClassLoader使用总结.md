@@ -188,3 +188,64 @@ sun.misc.Launcher$AppClassLoader@18b4aac2
 ```
 我们可以看到，第四行就是这个自定义的ClassLoader，他的父亲是AppClassLoader，爷爷是ExtClassLoader，太爷爷是null，其实就是用C写的BootStrapClassLoader。而当前系统的ClassLoader就是这个AppClassLoader。
 当然，这里说的父子关系并不是继承关系，而是组合关系，子ClassLoader保存了父ClassLoader的一个引用(parent)。
+
+### 有没有不用反射的更优雅的调用方法
+显然，每次都用反射来调用还是太蠢了，难道就没有更方便的类似用类名引用的方法么？当然是有的，前面之所以不能直接用类名引用是因为原生类的类加载器是systemClassLoader，而从class文件创建的类的类加载器是自定义的classLoader，这两个类本质不一样，因此才不能互相强制转换，如果硬要强制转换就会报ClassCastException。那么，如果我们提取一个父类，父类由systemClassLoader加载，而子类由自定义classLoader加载，然后强制转换的时候转换成父类不就好了么？
+做个试验，创建一个父类Father，其实就是提取了个抽象方法:
+```java
+package com.mythsman.test;
+
+public abstract class Father {
+    public abstract void say();
+}
+```
+然后修改一下Hello类：
+```java
+package com.mythsman.test;
+
+public class Hello extends Father {
+    @Override
+    public void say() {
+        System.out.println("say outside");
+    }
+}
+```
+然后将Hello类手动编译，并把class文件放到其他地方。重新修改这个类，将"say outside"改成"say inside"。
+再修改下主函数：
+```java
+package com.mythsman.test;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class Main {
+
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+        ClassLoader classLoader = new ClassLoader() {
+            @Override
+            public Class<?> loadClass(String s) throws ClassNotFoundException {
+                try {
+                    if (s.equals("com.mythsman.test.Hello")) {
+                        byte[] classBytes = Files.readAllBytes(Paths.get("/home/myths/Desktop/test/Hello.class"));
+                        return defineClass(s, classBytes, 0, classBytes.length);
+                    } else {
+                        return super.loadClass(s);
+                    }
+                } catch (IOException e) {
+                    throw new ClassNotFoundException(s);
+                }
+            }
+        };
+        Father outside = (Father) classLoader.loadClass("com.mythsman.test.Hello").newInstance();
+        Hello inside = new Hello();
+        outside.say();
+        inside.say();
+    }
+}
+```
+这样我们就可以看到输出是:
+```
+say outside
+say inside
+```
