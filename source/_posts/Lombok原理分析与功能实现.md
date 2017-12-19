@@ -557,3 +557,12 @@ public class App {
 mvn clean compile && java -cp target/classes com.mythsman.test.App
 ```
 最后就会在构建成功后打印"it works"。
+
+## 参考资料
+[GITHUB/lombok](https://github.com/rzwitserloot/lombok)
+[使用 lombok 简化 Java 代码](https://segmentfault.com/a/1190000005133786)
+[Java注解(3)-注解处理器](https://blog.zenfery.cc/archives/78.html)
+[stackoverflow/How does lombok work?](https://stackoverflow.com/questions/6107197/how-does-lombok-work)
+[【翻译】Javac骇客指南](https://my.oschina.net/superpdm/blog/129715)
+[Javac早期(编译期)](https://www.cnblogs.com/wade-luffy/p/6050331.html)
+[利用maven中resources插件的copy-resources目标进行资源copy和过滤](http://xigua366.iteye.com/blog/2080668)
