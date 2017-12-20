@@ -114,14 +114,14 @@ sitemap:
   path: sitemap.xml
 
 #hexo-douban
-#douban:
-#  user: mythsman
-#  book:
-#    title: 我的阅读
-#    quote: 2017年，我使用<a href="https://www.douban.com/people/mythsman/" target="_blank">豆瓣</a>记录我的阅读。
-#  movie:
-#    title: 我的电影
-#    quote: 2017年，我使用<a href="https://www.douban.com/people/mythsman/" target="_blank">豆瓣</a>记录我看的电影。
+douban:
+  user: mythsman
+  book:
+    title: 我的阅读
+    quote: 2017年，我使用<a href="https://www.douban.com/people/mythsman/" target="_blank">豆瓣</a>记录我的阅读。
+  movie:
+    title: 我的电影
+    quote: 2017年，我使用<a href="https://www.douban.com/people/mythsman/" target="_blank">豆瓣</a>记录我看的电影。
 
 
 #hexo-generator-tag
