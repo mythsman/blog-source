@@ -1,12 +1,13 @@
 # Header
 
 menu:
-  最新: /
-  归档: /archives
-  读书: /books
-  电影: /movies
-  发现: /social
-  关于: /about
+  最新文章: /
+  历史归档: /archives
+  豆瓣读书: /books
+  豆瓣电影: /movies
+  发现大佬: /social
+  关于自己: /about
+  百度统计: /statistics
 
 # SubNav
 subnav:
