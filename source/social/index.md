@@ -29,3 +29,5 @@ title: 我的博客圈
 |[余舜哲](http://chocoluffy.com/)|同龄的同学，现在在多伦多大学留学，对新技术有很大的热情，很不错的博客|
 |[aneasystone](http://www.aneasystone.com/)|80后码农一枚。喜欢开源，喜欢读书，喜欢折腾，方向是偏信息安全的，目前应该转了java|
 |[Zhisheng Tian](http://www.54tianzhisheng.cn)|同一届的同学，学习的能力跟写作的条理都非常清楚，基础功很扎实，也是非常值得学习|
+|[翟永超](http://blog.didispace.com/)|《Spring Cloud 微服务实战》一书作者，对Spring全家桶和微服务架构有着很深刻的理解|
+|[赵伊凡](http://irfen.me/)|比较喜欢总结知识的90后码农，好像写了本书叫《轻松学算法》|
