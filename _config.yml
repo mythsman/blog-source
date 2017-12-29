@@ -118,10 +118,10 @@ douban:
   user: mythsman
   book:
     title: 我的阅读
-    quote: 2017年，我使用<a href="https://www.douban.com/people/mythsman/" target="_blank">豆瓣</a>记录我的阅读。
+    quote: 2017年，我写了个<a href="https://github.com/mythsman/hexo-douban" target="_blank">插件</a>记录我读的书。
   movie:
     title: 我的电影
-    quote: 2017年，我使用<a href="https://www.douban.com/people/mythsman/" target="_blank">豆瓣</a>记录我看的电影。
+    quote: 2017年，我写了个<a href="https://github.com/mythsman/hexo-douban" target="_blank">插件</a>记录我看的电影。
 
 
 #hexo-generator-tag
