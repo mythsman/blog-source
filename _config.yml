@@ -153,3 +153,7 @@ marked:
   modifyAnchors: ''
   autolink: false
 
+
+#hexo-filter-asciinema
+asciinema:
+  enable: true
