@@ -31,3 +31,5 @@ title: 我的博客圈
 |[Zhisheng Tian](http://www.54tianzhisheng.cn)|同一届的同学，学习的能力跟写作的条理都非常清楚，基础功很扎实，也是非常值得学习|
 |[翟永超](http://blog.didispace.com/)|《Spring Cloud 微服务实战》一书作者，对Spring全家桶和微服务架构有着很深刻的理解|
 |[赵伊凡](http://irfen.me/)|比较喜欢总结知识的90后码农，好像写了本书叫《轻松学算法》|
+|[小草窝](https://blog.hacking8.com/)|很小就开始写代码的博主，自己写的emlog框架，比较喜欢搞网站安全|
+|[王爵](https://biezhi.me/)|blade框架的作者，维护了很多开源项目，用blade写的Tale博客框架也挺不错的|
