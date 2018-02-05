@@ -48,3 +48,5 @@ message: Welcome to my blog, enter password to read.
 
 ps:为防止以后页面失效，先存个截图：
 ![hexo-douban](/images/2017/06/17/1/1.png)
+
+pss:有什么问题欢迎在github上题[issue](https://github.com/mythsman/hexo-douban/issues)，加QQ什么的比较麻烦啊。。。
