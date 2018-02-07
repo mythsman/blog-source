@@ -23,7 +23,7 @@ tags:
 
 这种使用方式与我们使用sql绑定驱动挺像的，其实他们都是采用的类似的思想。
 
-但是这就带来一个问题，这种运行时进行服务发现的功能是怎么实现的呢？其实这种实现方法也挺多的，可以用Class.forName来指定加载(sql就是这么干的)，也可以自定义classLoader来指定加载(据说commons-logging是这么干的)，也可以用spi来动态加载(slf4j就是这么干的)。当然，我这里主要研究slf4j的加载方法。
+但是这就带来一个问题，这种运行时进行服务发现的功能是怎么实现的呢？这其实至少有两种解决办法，一种是通过配置文件，将需要加载的类写到配置文件里，然后再通过ClassLoader去加载这个类，做到运行时的加载(比如commons-logging的配置)；还有一种就更加方便了，不需要额外的配置文件，就能做到类的动态加载---SPI。
 
 # SPI
 ## 概述
@@ -112,6 +112,26 @@ public class SubstituteSpi implements Ispi {
 如果能成功发现一个，那么我们就可以返回这一个实例了。
 
 这种方法应该是一种比较清楚的服务动态发现的方法了。
+
+## 实践
+实际上我们的很多库都采用了SPI的规范只是我们可能用到的时候对原理不太了解，其实下面这些常见的框架里都用到了SPI:
+
+### JDBC
+我们在入门的时候都学过用jdbc包，用的时候我们都被要求写一段类似下面的代码：
+```java
+Class.forName("com.mysql.cj.jdbc.Driver");
+```
+其实这段代码没有任何实际意义，只是显式的加载了一个类，告诉我们记得添加这个jar包，实际上只要将这个jar包放在了类路径里面，这段话其实就没有必要了。
+我们去查 mysql-connector-java 这个包就会发现，他用的就是spi的方法，将自己的 `com.mysql.cj.jdbc.Driver` 这个类注册给了 `java.sql.Driver` 这个接口。加载的时候用的其实也是 ServiceLoader 。
+
+### Lombok
+lombok的原理也是类似，他用自己写的 AnnotationProcessor 去实现 javax.annotation.processing.Processor ，从而做到在编译期进行注解处理。
+
+### Slf4j
+这个我们下面细讲。
+
+反正我当前遇到的jar包，只要它的scope是runtime，基本上都是通过这种方法来搞得。
+
 
 # SLF4J
 ## 成员
