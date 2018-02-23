@@ -8,7 +8,7 @@
   "dependencies": {
     "hexo": "^3.5.0",
     "hexo-deployer-git": "^0.3.0",
-    "hexo-douban": "^0.2.7",
+    "hexo-douban": "^0.2.8",
     "hexo-excerpt": "^1.1.2",
     "hexo-filter-asciinema": "^1.0.1",
     "hexo-generator-archive": "^0.1.4",
