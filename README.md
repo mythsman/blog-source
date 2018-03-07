@@ -8,4 +8,4 @@
 :computer: This is my own website at [blog.mythsman.com](https://blog.mythsman.com) since 2015.11.2 
  
 ## Subscribe
-RSS: [:radio:](https://blog.mythsman.com/atom.xml)
+:radio: Subscribe: [RSS](https://blog.mythsman.com/atom.xml)
