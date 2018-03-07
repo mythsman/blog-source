@@ -6,6 +6,15 @@
 
 ## Introduction
 :computer: This is my own website at [blog.mythsman.com](https://blog.mythsman.com) since 2015.11.2 
+
+## Framework
+:white_check_mark: [Hexo](https://github.com/hexojs/hexo)
+
+## Theme
+:white_check_mark: [Yilia](https://github.com/litten/hexo-theme-yilia)
+
+## Editor
+:white_check_mark: [Jupyter](https://github.com/jupyter/notebook) at [jupyter.mythsman.com](http://jupyter.mythsman.com)
  
 ## Subscribe
-:radio: Subscribe: [RSS](https://blog.mythsman.com/atom.xml)
+:radio: : [RSS](https://blog.mythsman.com/atom.xml)
