@@ -11,10 +11,10 @@
 :white_check_mark: [Hexo](https://github.com/hexojs/hexo)
 
 ## Theme
-:white_check_mark: [Yilia](https://github.com/litten/hexo-theme-yilia)
+:palm_tree: [Yilia](https://github.com/litten/hexo-theme-yilia)
 
 ## Editor
-:white_check_mark: [Jupyter](https://github.com/jupyter/notebook) at [jupyter.mythsman.com](http://jupyter.mythsman.com)
+:pencil: [Jupyter](https://github.com/jupyter/notebook) at [jupyter.mythsman.com](http://jupyter.mythsman.com)
  
 ## Subscribe
 :radio: : [RSS](https://blog.mythsman.com/atom.xml)
