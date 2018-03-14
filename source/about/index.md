@@ -28,6 +28,7 @@ title: 关于我
 |---|---|
 |ID|Myths|
 |QQ|1276077732|
+|Wechat|mythsman|
 |Email|dqz48548263@qq.com|
 |Github|[mythsman](https://github.com/mythsman)|
 
