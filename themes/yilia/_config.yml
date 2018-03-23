@@ -126,23 +126,24 @@ smart_menu:
   aboutme: 说明
 
 friends:
-  Mikito(摸摸大): http://mikito.cn
-  Ivy_end(凯凯王): http://www.ivy-end.com
-  sdwalker(司机老): http://www.sdwalker.com
-  Maomorn(老毛子): http://maomorn.cn/wordpress
-  Anthony_An(沈学弟): http://blog.ibilidi.cn
-  Huas(花尔兹): http://qyxhsj.com.cn
-  AngelMsger(七号天): https://angelmsger.com
-  Netrvin(小dalao): https://131.re
-  ihoeys(梦魇小栈): https://blog.ihoey.com
-  callouweicheng(炜承学长): http://blog.callouweicheng.cn
-  Decader_Luo(潘大佬): http://decader.cn/
-  ZheWang(吉吉): http://zhewangchina.cn
-  Paladnix(岩巨): https://paladnix.github.io
-  Dcc(的小窝): https://dcc.cat
+  Mikito: http://mikito.cn
+  Ivy_end: http://www.ivy-end.com
+  sdwalker: http://www.sdwalker.com
+  Maomorn: http://maomorn.cn/wordpress
+  Anthony_An: http://blog.ibilidi.cn
+  Huas: http://qyxhsj.com.cn
+  AngelMsger: https://angelmsger.com
+  Netrvin: https://131.re
+  ihoeys: https://blog.ihoey.com
+  callouweicheng: http://blog.callouweicheng.cn
+  Decader_Luo: http://decader.cn/
+  ZheWang: http://zhewangchina.cn
+  Paladnix: https://paladnix.github.io
+  Dcc: https://dcc.cat
   泛泛而谈: https://tomato_peach.coding.me
   Liuye: https://liuyehcf.github.io
-  浩洋: https://harrysheep.github.io
+  HarrySheep: https://harrysheep.github.io
   Alliot: https://www.iots.vip
+  白吟灵: https://whiteyin.github.io
 
 aboutme: <span>本站点创建于2015年11月，采用<a href="https://hexo.io/" target="_blank">Hexo</a>开源框架，在<a href="https://github.com/litten/hexo-theme-yilia" target="_blank">yilia</a>主题基础上进行修改，加入<a href="https://github.com/mythsman/hexo-douban" target="_blank">豆瓣插件</a>同步读书电影信息，引入百度统计页面，用畅言插件做评论系统，全站采用https协议，静态文件部署在阿里云VPS上，，<a href="https://github.com/jupyter/notebook" target="_blank">Jupyter</a>作为Web端后台以及在线编辑器，并用Nginx做二级域名映射，网站源码以及文章托管于<a href="https://github.com/mythsman/blog" target="_blank">GITHUB</a>，所有文章都可以在GITHUB上找到markdown原文，欢迎大家互相交流学习。</span>
