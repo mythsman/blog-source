@@ -125,7 +125,7 @@ douban:
   game:
     title: 我的游戏
     quote: 写了个<a href="https://github.com/mythsman/hexo-douban" target="_blank">插件</a>记录我沉迷的游戏。
-#  timeout: 10000
+  timeout: 100000
 
 #hexo-generator-tag
 tag_generator:

@@ -35,3 +35,5 @@ title: 我的博客圈
 |[王爵](https://biezhi.me/)|blade框架的作者，维护了很多开源项目，用blade写的Tale博客框架也挺不错的|
 |[苏剑林 ](https://spaces.ac.cn/)|上知天文下知地理，涉猎极广的大佬|
 |[饮冰先生](https://myanbin.github.io/)|一个具有 INFP 性格的从事前端工作的前端前辈|
+|[陈启敬](https://deepzz.com/)|15年毕业的搞go的一位大哥|
+|[屈光宇](https://imququ.com)|08年毕业的前端工程师前辈|
