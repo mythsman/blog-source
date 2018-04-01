@@ -23,8 +23,8 @@ function init() {
 				let title = $em2.getAttribute('alt')
 				items.push({
 					src: src,
-					w: $em2.width,
-					h: $em2.height,
+					w: image.width || $em2.width,
+					h: image.height || $em2.height,
 					title: title
 				})
 			})
