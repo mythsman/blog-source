@@ -3,12 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.7.0"
+    "version": "3.7.1"
+  },
+  "scripts": {
+    "g": "hexo g",
+    "s": "hexo s",
+    "c": "hexo clean"
   },
   "dependencies": {
     "hexo": "^3.5.0",
     "hexo-deployer-git": "^0.3.0",
-    "hexo-douban": "^0.2.11",
+    "hexo-douban": "^0.2.16",
     "hexo-excerpt": "^1.1.2",
     "hexo-filter-asciinema": "^1.0.1",
     "hexo-generator-archive": "^0.1.4",
