@@ -74,11 +74,11 @@ theme: yilia
 
 
 #hexo-deployer-git
-#deploy:
-#  type: #git
-#  repository: #git@github.com:mythsman/mythsman.github.io.git
-#  branch: #master
-#  message: 
+deploy:
+  type: git
+  repository: git@github.com:mythsman/mythsman.github.io.git
+  branch: master
+  message: update my blog.
 
 #hexo-generator-json-content
 jsonContent:

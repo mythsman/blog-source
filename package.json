@@ -8,6 +8,7 @@
   "scripts": {
     "g": "hexo g",
     "s": "hexo s",
+    "d": "hexo d",
     "c": "hexo clean"
   },
   "dependencies": {
