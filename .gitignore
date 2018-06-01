@@ -1,6 +1,5 @@
 public/
 .deploy_git/
+.vscode/
 node_modules/
 db.json
-untitled*
-*.out
