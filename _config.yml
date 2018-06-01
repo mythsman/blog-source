@@ -118,6 +118,7 @@ sitemap:
 #hexo-douban
 douban:
   user: mythsman
+  builtin: false
   book:
     title: 我的阅读
     quote: 写了个<a href="https://github.com/mythsman/hexo-douban" target="_blank">插件</a>记录我读的书。

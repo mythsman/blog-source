@@ -6,10 +6,11 @@
     "version": "3.7.1"
   },
   "scripts": {
-    "g": "hexo g",
-    "s": "hexo s",
-    "d": "hexo d",
-    "c": "hexo clean"
+    "generate": "hexo generate",
+    "server": "hexo server",
+    "deploy": "hexo deploy",
+    "douban": "hexo douban",
+    "clean": "hexo clean"
   },
   "dependencies": {
     "hexo": "^3.5.0",
