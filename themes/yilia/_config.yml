@@ -155,5 +155,6 @@ friends:
   Alliot: https://www.iots.vip
   白吟灵: https://whiteyin.github.io
   千寻啊千寻: http://qianxunclub.com
+  zcdecay: https://zcdecay.github.io
 
 aboutme: <span>本站点创建于2015年11月，采用<a href="https://hexo.io/" target="_blank">Hexo</a>开源框架，在<a href="https://github.com/litten/hexo-theme-yilia" target="_blank">yilia</a>主题基础上进行修改，加入<a href="https://github.com/mythsman/hexo-douban" target="_blank">豆瓣插件</a>同步读书电影信息，引入百度统计页面，用畅言插件做评论系统，全站采用https协议，静态文件部署在阿里云VPS上，，<a href="https://github.com/jupyter/notebook" target="_blank">Jupyter</a>作为Web端后台以及在线编辑器，并用Nginx做二级域名映射，网站源码以及文章托管于<a href="https://github.com/mythsman/blog" target="_blank">GITHUB</a>，所有文章都可以在GITHUB上找到markdown原文，欢迎大家互相交流学习。</span>
