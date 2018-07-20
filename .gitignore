@@ -3,3 +3,4 @@ public/
 .vscode/
 node_modules/
 db.json
+_drafts/
