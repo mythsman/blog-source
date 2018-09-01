@@ -37,3 +37,4 @@ title: 我的博客圈
 |[饮冰先生](https://myanbin.github.io/)|一个具有 INFP 性格的从事前端工作的前端前辈|
 |[陈启敬](https://deepzz.com/)|15年毕业的搞go的一位大哥|
 |[屈光宇](https://imququ.com)|08年毕业的前端工程师前辈|
+|[伍酱](http://wuyuying.com/blog)|先后在BA工作过的小资程序媛，跟我等无产程序猿完全不是一个等级的|
