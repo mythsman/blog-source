@@ -148,7 +148,7 @@ archive_generator:
   daily: false
 
 #hexo-excerpt
-excerpt_depth: 5
+excerpt.depth: 5
 
 marked:
   gfm: true
