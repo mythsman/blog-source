@@ -476,8 +476,44 @@ com.mythsman.test.Myservice$$EnhancerBySpringCGLIB$$3afc9148
 ```
 显然，虽然spring aop采用了aspectj语法来定义切面，但是在实现切面逻辑的时候还是采用CGLIB来进行动态代理的方法。
 
+## 隐藏bug
+看上去，使用动态代理似乎能完美实现aspectj的全部功能，但是动态代理在使用的时候有一个致命的缺点，对于新手来说，这个缺点很容易被当成是bug。比如如下代码：
+```java
+@Component
+public class TestComponent {
+
+    @TestAspect
+    public void work(){
+        //do sth
+    }
+
+    public void call(){
+        work();
+    }
+}
+```
+假设TestAspect注解定义了一个切面，那么如果直接调用call方法，work方法是不会被代理的。这是因为call方法直接使用的是this对象的work方法，而不是代理后的对象的work方法，这一点尤其需要注意。解决方法如下：
+```java
+@Component
+public class TestComponent {
+
+    @Autowired
+    private TestComponent testComponent;
+
+    @TestAspect
+    public void work() {
+        //do sth
+    }
+
+    public void call() {
+        testComponent.work();
+    }
+}
+```
+必须手动将执行work的对象指定为使用代理的spring bean。
+
 ## 强行织入？
-当然，如果我们想，我们也可以强行采用织入的方式，不过我们就不能将切面类注册为spring的bean，并且采用ajc插件编译或者java agent在类加载时织入。
+当然，如果我们想，我们也可以强行采用织入的方式，不过我们就不能将切面类注册为spring的bean，只能采用ajc插件编译或者java agent在类加载时织入。
 
 
 # 参考资料
