@@ -13,9 +13,6 @@
 ## Theme
 :palm_tree: [Yilia](https://github.com/litten/hexo-theme-yilia)
 
-## Editor
-:pencil: [Jupyter](https://github.com/jupyter/notebook) at [jupyter.mythsman.com](http://jupyter.mythsman.com)
- 
 ## Subscribe
 :radio: [RSS](https://blog.mythsman.com/atom.xml)
 
