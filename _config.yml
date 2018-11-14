@@ -80,7 +80,6 @@ deploy:
   type: git
   repo:
     coding: git@git.coding.net:myths/myths.coding.me.git
-    github: git@github.com:mythsman/mythsman.github.io.git
   branch: master
   message: update my blog.
 
