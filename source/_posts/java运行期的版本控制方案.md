@@ -31,9 +31,9 @@ tags:
 ## 源码分析
 加载一个jarFile，当然是要用ClassLoader，比如对于URLClassLoader。根据之前[对ClassLoader的分析](/2017/12/17/1/)，查询下源码就会发现如下的加载流程：
 
-1. URLClassLoader在`loadClass`时，根据双亲委托模型，最终会用`findClass(String name)`方法用于查询特定类。
+* URLClassLoader在`loadClass`时，根据双亲委托模型，最终会用`findClass(String name)`方法用于查询特定类。
 
-2. `findClass(String name)`方法会调用`defineClass(String name, Resource res)`方法用于加载特定类，并通过`ucp.getResource`去加载`JarFile`：
+* `findClass(String name)`方法会调用`defineClass(String name, Resource res)`方法用于加载特定类，并通过`ucp.getResource`去加载`JarFile`：
 ```java
 protected Class<?> findClass(final String name)
         throws ClassNotFoundException
@@ -66,7 +66,8 @@ protected Class<?> findClass(final String name)
     }
 
 ```
-3. `JarFile`中定义了一个`Manifest`对象，用于存储Jar包的元信息：
+
+* `JarFile`中定义了一个`Manifest`对象，用于存储Jar包的元信息：
 ```java
 public
 class JarFile extends ZipFile {
@@ -94,7 +95,7 @@ class JarFile extends ZipFile {
 ```
 可见这里明确指定了MANIFEST文件的路径。
 
-4. `ManiFest`类中定义了一个`Attributes`对象，用来保存一些关键的特征：
+* `ManiFest`类中定义了一个`Attributes`对象，用来保存一些关键的特征：
 ```java
 public class Manifest implements Cloneable {
     // manifest main attributes
@@ -111,7 +112,7 @@ public class Manifest implements Cloneable {
 
 ```
 
-5. `Attributes`对象定义了一个叫`Name`的内部类，用来保存一些内定的属性（关键）：
+* `Attributes`对象定义了一个叫`Name`的内部类，用来保存一些内定的属性（关键）：
 ```java
     public static class Name {
         private String name;
@@ -342,7 +343,7 @@ public class Manifest implements Cloneable {
 ```
 这里定义了大量的属性名，当一个jarfile的Manifest文件中有这些属性，这些属性就会被识别。
 
-6. 在加载了上面的JarFile之后，`defineClass(String name, Resource res)`方法会继续调用一系列的`definePackage`方法，用于定义`Package`类：
+* 在加载了上面的JarFile之后，`defineClass(String name, Resource res)`方法会继续调用一系列的`definePackage`方法，用于定义`Package`类：
 ```java
     protected Package definePackage(String name, Manifest man, URL url)
         throws IllegalArgumentException
@@ -415,7 +416,7 @@ public class Manifest implements Cloneable {
 
 ```
 
-7. 这样，当从JarFile中加载一个类的时候，就顺便加载了他的Manifest文件，然后加载了Package对象。我们再来看Package对象的方法：
+* 这样，当从JarFile中加载一个类的时候，就顺便加载了他的Manifest文件，然后加载了Package对象。我们再来看Package对象的方法：
 ```java
 public class Package implements java.lang.reflect.AnnotatedElement {
     /**
@@ -607,11 +608,11 @@ static{
         //TODO 报一错出来
     }
 }
+```
 
 其中的"1.2.2"可以配置在Lion或者Apollo这样的配置中心里，以统一管理。
 
 不过蛋疼的是，不是所有的第三方包的jarfile里都自带版本信息的，比如上面的fastjson。。。
-```
 
 # 参考资料
 
