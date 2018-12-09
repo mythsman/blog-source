@@ -42,3 +42,4 @@ title: 我的博客圈
 |[java熊](https://javadoop.com/)|很认真的在分享知识的同行，语言通俗易懂，有自己深刻的思考。网络上信息披露的比较少，只知道目前在给众安保险工作。|
 |[美团点评团队](https://tech.meituan.com)|美团出品，必为精品。|
 |[并发编程网](http://ifeve.com)|国内知名的关于并发编程的技术论坛，发起人是写了《Java并发编程的艺术》的大佬方腾飞（清英），精品文章非常多。|
+|[顾轶灵](https://justineo.github.io/)|Baidu EFE的大佬，做了很多很多很棒的前端项目以及SlideShow。|

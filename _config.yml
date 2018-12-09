@@ -118,7 +118,7 @@ sitemap:
 
 #hexo-douban
 douban:
-  user: mythsman
+  user: mythsman 
   builtin: false
   book:
     title: 我的阅读
