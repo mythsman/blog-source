@@ -610,5 +610,3 @@ public class TestMain {
 [sofa-stack官网文档](https://alipay.github.io/sofastack.github.io/docs/)
 
 [Java隔离容器之sofa-ark使用说明及源码解析](https://juejin.im/post/5b6b982451882569fd2898d7)
-
-

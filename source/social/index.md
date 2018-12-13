@@ -2,7 +2,33 @@
 title: 我的博客圈
 ---
 
-> 除了友链（左侧朋友栏）之外，这些是我在刷博客圈的时候发现的大犇们，有的技术超群，有的思维活跃，有的生活优雅，而且还都在努力的进步。都是我十分羡慕的dalao。
+# 好友们
+|人物|简介|
+|-|-|
+|[Mikito](http://mikito.cn)|女朋友当然要放在第一个啦。。。|
+|[ivy-end](http://www.ivy-end.com)|凯凯王，伪文青会装X|
+|[sdwalker](http://www.sdwalker.com)|刻盘，ACM基佬不去巨硬搬砖摇身一变搞科研去了|
+|[MaoMorn](https://maomorn.cn/)|老毛子，大懒鬼好久不更了，考虑移除友链。。。|
+|[Anthony_An](http://blog.ibilidi.cn)|永亮学弟，一言不合跑去浙大读研了，江山代有才人出，不过DNS也该备个案吧。|
+|[qyxhsj](http://qyxhsj.com.cn)|花生君，房都买好了也就没啥好拼的了，姑且留个友链|
+|[angelmsger](https://angelmsger.com)|浩天兄，爱折腾的大佬|
+|[Netrvin](https://131.re)|关键字： luo niang & fan qiang|
+|[梦魇小站](https://blog.ihoey.com)|绝对是花心思打理博客的人，建议瞅一瞅，你会喜欢上他/她的|
+|[Decader_Luo](http://decader.cn)|加班成性的huaweier，博客崩了都不管，姑且先给你留个坑。|
+|[zhewang](http://zhewangchina.cn)|吉吉，加油啊|
+|[Paladnix](https://paladnix.github.io)|岩巨，保重身体，以后带我创业，我给你搬砖|
+|[Dcc](https://dcc.cat)|喜欢搞搞黑科技，很有想法，推荐一波|
+|[Liuye](https://liuyehcf.github.io)|很优秀有干货的同学，博客更新很勤|
+|[HarrySheep](https://harrysheep.github.io)|浩洋兄，刚起头，先看看|
+|[Alliot](https://www.iots.vip)|爱折腾的大佬，很勤奋也很有潜力，推荐一波|
+|[白吟灵](https://whiteyin.github.io)|搞前端的老乡，一个很有想法的人|
+|[千寻啊千寻](http://qianxunclub.com)|一个老老实实的程序猿，90年帮征婚|
+|[Newt](https://www.newt.fun)|Web Developer, Actor, and Life Coach in BeiJing|
+|[rudy_yuan](https://vim.ink)|vim指南，方便查看|
+|[梁桂钊](https://blog.720ui.com)|来自阿里的Java后端工程师，工作有四五年了，热衷于分享技术，维护了公众号《服务端思维》，并且也在知识星球做知识付费服务。|
+
+
+# 大佬们
 
 |人物|简介|
 |-|-|

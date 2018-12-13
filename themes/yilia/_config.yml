@@ -120,31 +120,10 @@ slider:
 #  friends: false
 smart_menu:
   innerArchive: 搜索
-  friends: 朋友
+  friends: false
   aboutme: 说明
 
-friends:
-  Mikito: http://mikito.cn
-  Ivy_end: http://www.ivy-end.com
-  sdwalker: http://www.sdwalker.com
-  Maomorn: http://maomorn.cn/wordpress
-  Anthony_An: http://blog.ibilidi.cn
-  Huas: http://qyxhsj.com.cn
-  AngelMsger: https://angelmsger.com
-  Netrvin: https://131.re
-  ihoeys: https://blog.ihoey.com
-  callouweicheng: http://blog.callouweicheng.cn
-  Decader_Luo: http://decader.cn/
-  ZheWang: http://zhewangchina.cn
-  Paladnix: https://paladnix.github.io
-  Dcc: https://dcc.cat
-  泛泛而谈: https://tomato_peach.coding.me
-  Liuye: https://liuyehcf.github.io
-  HarrySheep: https://harrysheep.github.io
-  Alliot: https://www.iots.vip
-  白吟灵: https://whiteyin.github.io
-  千寻啊千寻: http://qianxunclub.com
-  newtfun: http://newt.fun
-  rudy_yuan: https://vim.ink
+# friends:
+#   name: site
 
 aboutme: 一枚在魔都出卖劳力的IT民工，朝11晚11，工作繁忙，请多关照。
