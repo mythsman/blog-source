@@ -24,9 +24,9 @@ title: 我的博客圈
 |[白吟灵](https://whiteyin.github.io)|搞前端的老乡，一个很有想法的人|
 |[千寻啊千寻](http://qianxunclub.com)|一个老老实实的程序猿，90年帮征婚|
 |[Newt](https://www.newt.fun)|Web Developer, Actor, and Life Coach in BeiJing|
-|[rudy_yuan](https://vim.ink)|vim指南，方便查看|
+|[vim教程网](https://vim.ink)|vim指南，各种高级用法，欢迎查看。|
 |[梁桂钊](https://blog.720ui.com)|来自阿里的Java后端工程师，工作有四五年了，热衷于分享技术，维护了公众号《服务端思维》，并且也在知识星球做知识付费服务。|
-
+|[李瑞豪](https://lruihao.cn)|搞过acm的同学，博客管理的很棒，建议各位过去玩一玩。|
 
 # 大佬们
 
@@ -69,3 +69,4 @@ title: 我的博客圈
 |[美团点评团队](https://tech.meituan.com)|美团出品，必为精品。|
 |[并发编程网](http://ifeve.com)|国内知名的关于并发编程的技术论坛，发起人是写了《Java并发编程的艺术》的大佬方腾飞（清英），精品文章非常多。|
 |[顾轶灵](https://justineo.github.io/)|Baidu EFE的大佬，做了很多很多很棒的前端项目以及SlideShow。|
+|[知秋](https://muyinchen.github.io/)|一直在分享一些深度文章的大佬，最近一直在B站录RxJava跟webFlux等的一系列视频，值得一看。|
