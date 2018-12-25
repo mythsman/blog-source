@@ -1544,7 +1544,7 @@ import Api from './api'
                 ? t.timeago.now
                 : a < 8
                 ? a + ' ' + t.timeago.days
-                : i(e)
+                : i(new Date(e))
             } catch (e) {}
         },
         i = function(e) {
