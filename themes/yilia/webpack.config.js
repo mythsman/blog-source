@@ -12,14 +12,17 @@ var minifyHTML = {
 
 module.exports = {
   entry: {
-    main: "./source-src/js/main.js",
+    main: ["./source-src/js/main.js","./source-src/js/comment/api.js"],
+    Valine: "./source-src/js/comment/valine.js",
     slider: "./source-src/js/slider.js",
-    mobile: ["babel-polyfill", "./source-src/js/mobile.js"]
+    mobile: [ "./source-src/js/mobile.js"]
   },
   output: {
     path: "./source",
     publicPath: "./",
-    filename: "[name].js"
+    filename: "[name].js",
+    libraryTarget: 'var',
+    library: "[name]"
   },
   module: {
     loaders: [{

@@ -107,7 +107,7 @@
     }) %>
   <% } %>
 
-  <% if (theme.valine && theme.valine.appid && theme.valine.appkey){ %>
+  <% if (theme.valine){ %>
     <section id="comments" style="margin:10px 30px auto 30px;background:white;">
       <%- partial('post/valine', {
         key: post.slug,
