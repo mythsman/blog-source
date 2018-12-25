@@ -88,7 +88,7 @@ share_jia: false
 valine: 
  avatar:  #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
  server: https://api.mythsman.com
- placeholder: 说点啥~~ #评论框占位符
+ placeholder: 记得填邮箱哦，如果有新的回复，我将能够通过邮件及时通知到你的~
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
