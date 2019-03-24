@@ -32,6 +32,8 @@ title: 我的博客圈
 
 |人物|简介|
 |-|-|
+|[lamport](http://www.lamport.org/)|高山仰止|
+|[leijun](http://leijun.blog.techweb.com.cn/)|中国IT界无人不知无人不晓的传奇，虽然断更好久了。。。|
 |[纯洁的微笑](http://www.ityouknow.com)|资深码农博主，对Spring框架的总结非常不错，现在在一家互联网金融公司做技术经理兼技术负责人|
 |[Raysmond](http://raysmond.com/)|复旦的计算机研究生，现在在北京工作，生活很精彩，工程能力也非常强，看到他在与我同龄时写的一些代码，非常佩服|
 |[Yikun](http://yikun.github.io/)|西电毕业的通信领域研究生，去年好像去了菊厂，手绘很棒，生活也很精彩，也是个技术牛人|
@@ -70,3 +72,5 @@ title: 我的博客圈
 |[并发编程网](http://ifeve.com)|国内知名的关于并发编程的技术论坛，发起人是写了《Java并发编程的艺术》的大佬方腾飞（清英），精品文章非常多。|
 |[顾轶灵](https://justineo.github.io/)|Baidu EFE的大佬，做了很多很多很棒的前端项目以及SlideShow。|
 |[知秋](https://muyinchen.github.io/)|一直在分享一些深度文章的大佬，最近一直在B站录RxJava跟webFlux等的一系列视频，值得一看。|
+|[李瑞豪](https://lruihao.cn)|一个好奇又有趣的博客---真是很有趣哈哈|
+|[hongjiang](https://hongjiang.info/)|目前在挖财工作的有十几年经验的scala工程师，学akka的时候拜读过很多篇文章。|
