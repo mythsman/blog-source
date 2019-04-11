@@ -25,6 +25,7 @@ tags:
  * @date ${DATE}
  */
 ```
+当然，@date 并不是标准的javadoc注解，不过也无妨了。
 
 ## 修改编辑器样式
 人老了，眼神不好，编辑器字体太小的话为了看清楚还要凑上去，对颈椎也不好。
@@ -43,7 +44,9 @@ tags:
 
 不知为何 IntelliJ 默认没有增加这个 Inspection ，那我们加一下就好了。
 
-找到下面的路径：`File > Settings > Editor > Inspections > Java > Serialization issues`，把`Serializable class without 'serialVersionUID'`的校验勾上。
+找到下面的路径：`File > Settings > Editor > Inspections `。首先把 `Profile` 设置成`Default IDE`，这样配置才能在所有项目中应用，否则就只在当前项目中应用。然后在`Java > Serialization issues`中，找到`Serializable class without 'serialVersionUID'`，并把校验勾上。
+
+增加了 Inspections 告警之后，就可以条件激活时，触发 Intention 的提示，这样就可以使用 `alt + enter` 直接自动生成UID了。
 
 ## 指定JavaScript语言
 JavaScript的语言特性飚的太快了，为了防止使用新特性报错，需要调一下语言等级。
