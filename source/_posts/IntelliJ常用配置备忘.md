@@ -48,6 +48,8 @@ tags:
 
 增加了 Inspections 告警之后，就可以条件激活时，触发 Intention 的提示，这样就可以使用 `alt + enter` 直接自动生成UID了。
 
+话说回来，有一个叫[GenerateSerialVersionUID](https://plugins.jetbrains.com/plugin/185-generateserialversionuid)的插件也是专门用来做这件事的，不过相比较之下还是直接改下配置更轻量。
+
 ## 指定JavaScript语言
 JavaScript的语言特性飚的太快了，为了防止使用新特性报错，需要调一下语言等级。
 
